@@ -1,12 +1,10 @@
 {
   "pages": [
-    "pages/place/place",
     "pages/argument/argument",
+    "pages/place/place",
     "pages/nav/nav",
     "pages/teacher/teacher",
     "pages/register/register",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/support/support",
     "pages/place/list/list"
   ],
