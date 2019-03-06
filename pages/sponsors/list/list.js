@@ -1,36 +1,13 @@
-// pages/nav/nav.js
+import { sponsors } from '../../../mockdata/sponsors.js';
 Page({
-  /**
-   * 用户跳转不同的nav
-   */
-  switchNav(e) {
-    wx.navigateTo({
-      url: e.target.dataset.url
-    })
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    navList:[
-      {
-        name: '评论',
-        url: '../argument/argument'
-      },
-      {
-        name: '赞助商',
-        url: '../sponsors/list/list'
-      },
-      {
-        name: '场地',
-        url: '../place/list/list'
-      },
-      {
-        name: '讲师',
-        url: '../teacher/list/list'
-      }
-    ]
+    sponsors: sponsors
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

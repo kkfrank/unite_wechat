@@ -1,41 +1,23 @@
-// pages/nav/nav.js
 Page({
-  /**
-   * 用户跳转不同的nav
-   */
-  switchNav(e) {
-    wx.navigateTo({
-      url: e.target.dataset.url
-    })
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    navList:[
-      {
-        name: '评论',
-        url: '../argument/argument'
-      },
-      {
-        name: '赞助商',
-        url: '../sponsors/list/list'
-      },
-      {
-        name: '场地',
-        url: '../place/list/list'
-      },
-      {
-        name: '讲师',
-        url: '../teacher/list/list'
-      }
-    ]
+    item:{}
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      item:{
+        name: "some-name",
+        desc: "some-info",
+        img:'http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png'
+      }
+    })
   },
 
   /**

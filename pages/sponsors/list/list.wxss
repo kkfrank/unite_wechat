@@ -1,0 +1,15 @@
+.sponsors-item{
+  display: flex;
+}
+.sponsors-item{
+  display: flex;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+ 
+}
+.sponsors-item:first-child{
+  border-top:1px solid #ddd;
+}
+.sponsors-item-info{
+  
+}

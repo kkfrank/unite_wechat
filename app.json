@@ -1,14 +1,16 @@
 {
   "pages": [
     "pages/register/register",
-    "pages/argument/argument",
     "pages/nav/nav",
+    "pages/argument/argument",
     "pages/teacher/list/list",
     "pages/teacher/detail/detail",
     "pages/place/list/list",
     "pages/place/detail/detail",
     "pages/support/detail/detail",
-    "pages/support/list/list"
+    "pages/support/list/list",
+    "pages/sponsors/list/list",
+    "pages/sponsors/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
