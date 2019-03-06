@@ -1,16 +1,6 @@
-// pages/register/register.js
+// pages/support/list/list.js
 Page({
-  /**
-   * 获取手机号码
-   */
-  getPhoneNumber(e) {
-    wx.navigateTo({
-      url: '../nav/nav',
-    })
-    // console.log(e.detail.errMsg)
-    // console.log(e.detail.iv)
-    // console.log(e.detail.encryptedData)
-  },
+
   /**
    * 页面的初始数据
    */

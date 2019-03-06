@@ -1,0 +1,16 @@
+<!--components/list/list.wxml-->
+<view class="list">
+  <view class="item" wx:for="{{list}}" bindtap="toDetail" data-item="{{item}}">
+    <view class="left">
+      <view>
+        <image src="{{item.url}}" style="width:100rpx;" mode="aspectFit"></image>
+      </view>
+      <view>
+        {{item.name}}
+      </view>
+    </view>
+    <view class="content">
+      {{item.description}}
+    </view>
+  </view>
+</view>

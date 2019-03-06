@@ -19,15 +19,15 @@ Page({
       },
       {
         name: '赞助商',
-        url: '../support/support'
+        url: '../support/list/list'
       },
       {
         name: '场地',
-        url: '../place/place'
+        url: '../place/list/list'
       },
       {
         name: '讲师',
-        url: '../teacher/teacher'
+        url: '../teacher/list/list'
       }
     ]
   },

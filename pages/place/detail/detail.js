@@ -1,4 +1,4 @@
-// pages/support/support.js
+// pages/place/detail/detail.js
 Page({
 
   /**

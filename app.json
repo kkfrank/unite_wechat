@@ -1,17 +1,22 @@
 {
   "pages": [
-    "pages/argument/argument",
-    "pages/place/place",
-    "pages/nav/nav",
-    "pages/teacher/teacher",
     "pages/register/register",
-    "pages/support/support",
-    "pages/place/list/list"
+    "pages/argument/argument",
+    "pages/nav/nav",
+    "pages/teacher/list/list",
+    "pages/teacher/detail/detail",
+    "pages/place/list/list",
+    "pages/place/detail/detail",
+    "pages/support/detail/detail",
+    "pages/support/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Unity",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "list": "components/list/list"
   }
 }

@@ -10,6 +10,7 @@
     <input type="text" placeholder="请输入公司" />
   </view>
   <view class="form-submit">
-    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">注册</button>
+    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">注册</button> -->
+    <button  bindtap="getPhoneNumber">注册</button>
   </view>
 </view>

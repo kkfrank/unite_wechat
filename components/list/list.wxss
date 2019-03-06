@@ -1,0 +1,27 @@
+/* components/list/list.wxss */
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10rpx;
+}
+
+.item image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.content {
+  display: -webkit-box;
+  text-indent: 80rpx;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
