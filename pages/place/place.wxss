@@ -17,6 +17,6 @@
 .block-item {
   width: 50%;
   height: 50%;
-  background-color: red;
+  background-color: blue;
   opacity: 0.3;
 }
