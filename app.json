@@ -1,12 +1,19 @@
 {
-  "pages":[
+  "pages": [
+    "pages/place/place",
+    "pages/argument/argument",
+    "pages/nav/nav",
+    "pages/teacher/teacher",
+    "pages/register/register",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/support/support",
+    "pages/place/list/list"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "Unity",
+    "navigationBarTextStyle": "black"
   }
 }

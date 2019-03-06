@@ -1,0 +1,22 @@
+/* pages/place/place.wxss */
+.place-item {
+  position: relative;
+}
+.place-image{
+  position: relative;
+}
+.place-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.block-item {
+  width: 50%;
+  height: 50%;
+  background-color: red;
+  opacity: 0.3;
+}

@@ -1,0 +1,15 @@
+<!--pages/register/register.wxml-->
+<view class="box">
+  <view class="form-item">
+    <input type="text" placeholder="请输入邮箱" />
+  </view>
+  <view class="form-item">
+    <input type="text" placeholder="请输入职位" />
+  </view>
+  <view class="form-item">
+    <input type="text" placeholder="请输入公司" />
+  </view>
+  <view class="form-submit">
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">注册</button>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/teacher/teacher.wxml-->
+<view class="teacher-box">
+  <view class="teacher-item" wx:for="{{teacherList}}">
+    <view class="item-image">
+    <image src='{{item.url}}'></image>
+    </view>
+    <view class="item-title">
+    姓名:<text>{{item.profession}}-{{item.name}}</text>
+    </view>
+    <view class="item-title">
+    优势:<text>{{item.advantage}}</text>
+    </view>
+    <view class="item-description">
+    课程描述:<text>{{item.description}}</text>
+    </view>
+  </view>
+</view>

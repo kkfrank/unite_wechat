@@ -1,0 +1,10 @@
+/* pages/nav/nav.wxss */
+.nav>.nav-item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  padding: 20rpx;
+}

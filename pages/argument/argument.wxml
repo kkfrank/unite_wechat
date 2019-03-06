@@ -1,0 +1,17 @@
+<!--pages/teacher/teacher.wxml-->
+<view class="teacher-box">
+  <view class="teacher-item" wx:for="{{teacherList}}">
+    <view class="item-image">
+    <image src='{{item.url}}'></image>
+    </view>
+    <view class="item-title">
+    姓名:<text>{{item.profession}}-{{item.name}}</text>
+    </view>
+    <view class="item-argument">
+    <textarea placeholder='请输入评价'></textarea>
+    </view>
+    <view class="item-submit">
+    <button>提交</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/* pages/argument/argument.wxss */
+.item-argument {
+  border: 1rpx solid #ddd;
+}
