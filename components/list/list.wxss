@@ -3,6 +3,7 @@
 .item {
   display: flex;
   justify-content: flex-start;
+  border-bottom: 1rpx solid #ddd;
 }
 
 .left {
