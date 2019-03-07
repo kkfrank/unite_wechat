@@ -2,7 +2,6 @@
   "pages": [
     "pages/register/register",
     "pages/nav/nav",
-    "pages/argument/argument",
     "pages/teacher/list/list",
     "pages/teacher/detail/detail",
     "pages/place/list/list",
@@ -10,7 +9,9 @@
     "pages/support/detail/detail",
     "pages/support/list/list",
     "pages/sponsors/list/list",
-    "pages/sponsors/detail/detail"
+    "pages/sponsors/detail/detail",
+    "pages/argument/list/list",
+    "pages/argument/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

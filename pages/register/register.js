@@ -1,12 +1,46 @@
 // pages/register/register.js
 Page({
-  /**
-   * 获取手机号码
+  /***
+   * 监听用户输入邮箱
    */
-  getPhoneNumber(e) {
-    wx.navigateTo({
-      url: '../nav/nav',
+  bindEmailInput(e) {
+    this.setData({
+      'user.email':e.detail.value
     })
+  },
+  /***
+   * 监听用户输入职位
+   */
+  bindProfessionInput(e) {
+    this.setData({
+      'user.profession': e.detail.value
+    })
+  },
+  /***
+   * 监听用户输入公司
+   */
+  bindCompanyInput(e) {
+    this.setData({
+      'user.company': e.detail.value
+    })
+  },
+  /**
+   * 点击这册按钮进行注册
+   */
+  register(e) {
+    let reg = new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$')
+    console.log(this.data.user)
+    if(!reg.test(this.data.user.email)){
+      wx.showToast({
+        title: '邮箱格式错误',
+        icon: 'none',
+        duration: 2000
+      })
+    } else {
+      wx.navigateTo({
+        url: '../nav/nav',
+      })
+    }
     // console.log(e.detail.errMsg)
     // console.log(e.detail.iv)
     // console.log(e.detail.encryptedData)
@@ -15,7 +49,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    user: {
+      email: null,
+      profession: null,
+      company: null
+    }
   },
 
   /**
