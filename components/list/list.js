@@ -29,7 +29,6 @@ Component({
      * 点击列表去详情页面
      */
     toDetail(e) {
-      console.log(e)
       wx.navigateTo({
         url: '../detail/detail',
       })

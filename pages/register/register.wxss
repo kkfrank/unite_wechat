@@ -1,9 +1,19 @@
 /* pages/register/register.wxss */
-.box>.form-item{
+
+.box>.form-item {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   margin-bottom: 10px;
   border-bottom: 1rpx solid #ddd;
   box-sizing: border-box;
   padding-left: 20rpx;
+}
+
+.box>.form-item>view {
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+.must {
+  color: red;
 }

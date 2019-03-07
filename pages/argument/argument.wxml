@@ -2,16 +2,23 @@
 <view class="teacher-box">
   <view class="teacher-item" wx:for="{{teacherList}}">
     <view class="item-image">
-    <image src='{{item.url}}'></image>
+      <image src='{{item.url}}'></image>
     </view>
     <view class="item-title">
-    姓名:<text>{{item.profession}}-{{item.name}}</text>
+      姓名:
+      <text>{{item.profession}}-{{item.name}}</text>
     </view>
     <view class="item-argument">
-    <textarea placeholder='请输入评价'></textarea>
+      <view class="item-label">
+        <text>讲师讲课水平：</text>
+      </view>
+      <view class="star-box">
+        <view wx:for="{{starList}}" class="iconfont {{item.className}}" data-index="{{index}}" bindtap="changeStar"></view>
+      </view>
+      <textarea placeholder='请输入建议'></textarea>
     </view>
     <view class="item-submit">
-    <button>提交</button>
+      <button>提交</button>
     </view>
   </view>
 </view>
