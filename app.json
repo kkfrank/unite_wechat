@@ -3,21 +3,20 @@
     "pages/place/list/list",
     "pages/register/register",
     "pages/nav/nav",
-  
+    "pages/argument/detail/detail",
+    "pages/argument/list/list",
     "pages/teacher/list/list",
     "pages/teacher/detail/detail",
     "pages/support/detail/detail",
     "pages/support/list/list",
     "pages/sponsors/list/list",
-  
     "pages/sponsors/detail/detail",
     "pages/place/detailAR/detailAR",
+    "pages/place/detailAsset/detailAsset",
     "pages/place/detailVR/detailVR",
     "pages/place/detail3D/detail3D",
     "pages/place/detail2D/detail2D",
-    "pages/place/detailAsset/detailAsset",
     "pages/place/detailSubs/detailSubs"
-
   ],
   "window": {
     "backgroundTextStyle": "light",
