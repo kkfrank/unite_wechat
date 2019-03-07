@@ -1,0 +1,4 @@
+<!--pages/argument/list/list.wxml-->
+<view class="teacher-box">
+  <list list="{{list}}"></list>
+</view>

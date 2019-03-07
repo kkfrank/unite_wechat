@@ -1,12 +1,12 @@
 <!--pages/teacher/teacher.wxml-->
 <view class="teacher-box">
-  <view class="teacher-item" wx:for="{{teacherList}}">
+  <view class="teacher-item" >
     <view class="item-image">
-      <image src='{{item.url}}'></image>
+      <image src='{{teacher.url}}'></image>
     </view>
     <view class="item-title">
       姓名:
-      <text>{{item.profession}}-{{item.name}}</text>
+      <text>{{teacher.profession}}-{{teacher.name}}</text>
     </view>
     <view class="item-argument">
       <view class="item-label">

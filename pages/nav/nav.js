@@ -15,7 +15,7 @@ Page({
     navList:[
       {
         name: '评论',
-        url: '../argument/argument'
+        url: '../argument/list/list'
       },
       {
         name: '赞助商',

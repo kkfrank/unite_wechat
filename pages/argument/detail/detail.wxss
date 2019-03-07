@@ -1,5 +1,5 @@
 /* pages/argument/argument.wxss */
-@import '../../iconfont/iconfont.wxss';
+@import '../../../iconfont/iconfont.wxss';
 .item-argument {
   border: 1rpx solid #ddd;
 }
@@ -7,4 +7,7 @@
   border-bottom: 1rpx solid #ddd;
   display: flex;
   justify-content: space-around;
+}
+.icon-star {
+  color: gold;
 }
