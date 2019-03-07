@@ -1,66 +1,95 @@
 // pages/place/list/list.js
-Page({
-
-  /**
-   * 页面的初始数据
-   */
+Component({
   data: {
-
+    elements: [{
+      title: 'unite场馆1',
+      name: 'uniteVR',
+      color: 'cyan',
+      imgNum: '111',
+      url: '../detailVR/detailVR',
+      icon: 'newsfill'
+    },
+    {
+      title: 'unite场馆2',
+      name: 'uniteAR',
+      color: 'blue',
+      imgNum: '222',
+      url: '../detailAR/detailAR',
+      icon: 'colorlens'
+    },
+    {
+      title: 'unite场馆3',
+      name: 'unite2D',
+      color: 'purple',
+      imgNum: '333',
+      url: '../detail2D/detail2D',
+      icon: 'font'
+    },
+    {
+      title: 'unite场馆4',
+      name: 'unite3D',
+      color: 'mauve',
+      imgNum: '444',
+      url: '../detail3D/detail3D',
+      icon: 'icon'
+    },
+    {
+      title: 'unite场馆5',
+      name: 'unityAsset',
+      color: 'pink',
+      imgNum: '555', 
+      url: '../detailAsset/detailAsset',
+      icon: 'btn'
+    },
+    {
+      title: 'unite场馆6',
+      name: 'unitySubs',
+      color: 'brown',
+      imgNum: '666',
+      url: '../detailSubs/detailSubs',
+      icon: 'tagfill'
+    } 
+    ],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  methods: {
+    onLoad() {
+      let that = this;
+      // 获取用户信息
+      wx.getSetting({
+        success: res => {
+          if (!res.authSetting['scope.userInfo']) {
+            wx.redirectTo({
+              url: '/pages/auth/auth'
+            })
+          }
+        }
+      })
+    },
+    showModal(e) {
+      this.setData({
+        modalName: e.currentTarget.dataset.target
+      })
+    },
+    hideModal(e) {
+      this.setData({
+        modalName: null
+      })
+    },
+    onShareAppMessage() {
+      return {
+        title: 'UniteShanghai2019',
+        imageUrl: 'https://image.weilanwl.com/color2.0/share2215.jpg',
+        path: '/pages/basics/home/home'
+      }
+    },
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  pageLifetimes: {
+    show() {
+      if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+        this.getTabBar().setData({
+          selected: 0
+        })
+      }
+    }
   }
 })

@@ -1,4 +1,11 @@
 <!--pages/place/list/list.wxml-->
-<view>
-placeß
+<image src='../../../resources/uniteshanghai/unitebasic.jpeg' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+<view class='nav-list'>
+  <navigator open-type="navigate" hover-class='none' url="{{item.url}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key style='position:relative;' >
+  <image src='../../../resources/uniteshanghai/{{item.imgNum}}.png' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+    <view class="nav-title">{{item.title}}</view>
+    <view class="nav-name">{{item.name}}</view>
+    <text class='icon-{{item.icon}}'></text>
+  </navigator>
 </view>
+<view class='cu-tabbar-height'></view>
