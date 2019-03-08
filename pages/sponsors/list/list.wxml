@@ -1,7 +1,7 @@
-<view wx:for="{{sponsors}}" wx:for-item="item" wx:key="id" class='sponsors'>
-  <navigator url="../detail/detail?id={{item.id}}" class='sponsors-item p20'>
+<view class='sponsors'>
+  <navigator url="../detail/detail?id={{item.id}}" class='sponsors-item p20' wx:for="{{sponsors}}" wx:for-item="item" wx:key="id">
     <image src="{{item.src}}" style="width:50px;height:50px"></image>
-    <view class='sponsors-item-info ml10'>
+    <view class='sponsors-item-info'>
       <view class=''>{{item.name}}</view>
       <view>{{item.desc}}</view>
     </view>

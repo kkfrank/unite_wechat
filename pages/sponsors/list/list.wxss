@@ -5,11 +5,11 @@
   display: flex;
   align-items:center;
   border-bottom:1px solid #ddd;
- 
+ padding:20rpx;
 }
 .sponsors-item:first-child{
   border-top:1px solid #ddd;
 }
 .sponsors-item-info{
-  
+  margin-left: 10rpx;
 }
