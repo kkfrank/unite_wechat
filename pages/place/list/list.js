@@ -13,7 +13,7 @@ Component({
       title: 'unite场馆2',
       name: 'uniteAR',
       color: 'blue',
-      imgNum: '222',
+      imgNum: '111',
       url: '../detailAR/detailAR',
       icon: 'colorlens'
     },
@@ -21,7 +21,7 @@ Component({
       title: 'unite场馆3',
       name: 'unite2D',
       color: 'purple',
-      imgNum: '333',
+      imgNum: '111',
       url: '../detail2D/detail2D',
       icon: 'font'
     },
@@ -29,7 +29,7 @@ Component({
       title: 'unite场馆4',
       name: 'unite3D',
       color: 'mauve',
-      imgNum: '444',
+      imgNum: '111',
       url: '../detail3D/detail3D',
       icon: 'icon'
     },
@@ -37,7 +37,7 @@ Component({
       title: 'unite场馆5',
       name: 'unityAsset',
       color: 'pink',
-      imgNum: '555', 
+      imgNum: '111', 
       url: '../detailAsset/detailAsset',
       icon: 'btn'
     },
@@ -45,7 +45,7 @@ Component({
       title: 'unite场馆6',
       name: 'unitySubs',
       color: 'brown',
-      imgNum: '666',
+      imgNum: '111',
       url: '../detailSubs/detailSubs',
       icon: 'tagfill'
     } 
