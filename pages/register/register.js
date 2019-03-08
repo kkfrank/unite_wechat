@@ -37,7 +37,7 @@ Page({
         duration: 2000
       })
     } else {
-      wx.navigateTo({
+      wx.redirectTo({
         url: '../nav/nav',
       })
     }
