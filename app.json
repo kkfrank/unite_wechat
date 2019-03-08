@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/register/register",
+    "pages/place/list/list",
     "pages/nav/nav",
     "pages/argument/list/list",
     "pages/argument/detail/detail",
@@ -9,7 +10,6 @@
     "pages/support/detail/detail",
     "pages/support/list/list",
     "pages/sponsors/list/list",
-    "pages/place/list/list",
     "pages/sponsors/detail/detail",
     "pages/place/detailAR/detailAR",
     "pages/place/detailVR/detailVR",
