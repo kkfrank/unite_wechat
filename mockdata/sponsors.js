@@ -44,9 +44,33 @@ var sponsors = [
   {
     id: "8",
     src: "http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png",
-    name: "name6",
+    name: "name63",
     desc: "ablskdjfs"
   },
+  {
+    id: "9",
+    src: "http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png",
+    name: "name62",
+    desc: "ablskdjfs"
+  },
+  {
+    id: "10",
+    src: "http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png",
+    name: "name62",
+    desc: "ablskdjfs"
+  },
+  {
+    id: "11",
+    src: "http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png",
+    name: "name61",
+    desc: "ablskdjfs"
+  },
+  {
+    id: "12",
+    src: "http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png",
+    name: "name6221",
+    desc: "ablskd222jfs"
+  }
 ]
 
 export { sponsors }
