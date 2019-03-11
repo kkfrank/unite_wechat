@@ -4,6 +4,8 @@
   display: flex;
   justify-content: flex-start;
   border-bottom: 1rpx solid #ddd;
+  padding: 20rpx 0;
+  font-size: 32rpx;
 }
 
 .left {
@@ -20,6 +22,8 @@
 }
 
 .content {
+  padding: 0 10rpx;
+  line-height: 60rpx;
   display: -webkit-box;
   text-indent: 80rpx;
   -webkit-box-orient: vertical;

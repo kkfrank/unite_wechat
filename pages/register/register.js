@@ -28,8 +28,7 @@ Page({
    * 点击这册按钮进行注册
    */
   register(e) {
-    let reg = new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$')
-    console.log(this.data.user)
+    let reg = new RegExp('^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$')
     if(!reg.test(this.data.user.email)){
       wx.showToast({
         title: '邮箱格式错误',

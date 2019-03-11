@@ -1,13 +1,22 @@
 /* pages/argument/argument.wxss */
 @import '../../../iconfont/iconfont.wxss';
-.item-argument {
-  border: 1rpx solid #ddd;
+.header-item {
+  display: flex;
+  justify-content: space-between;
+}
+.header-item image{
+  width: 100rpx;
+  height: 100rpx;
 }
 .star-box {
-  border-bottom: 1rpx solid #ddd;
   display: flex;
   justify-content: space-around;
+  padding-bottom: 20rpx;
 }
 .icon-star {
   color: gold;
+}
+.iconfont {
+  font-size: 64rpx;
+  w
 }

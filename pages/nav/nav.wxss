@@ -1,10 +1,33 @@
 /* pages/nav/nav.wxss */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 80rpx;
+  justify-content: space-between;
+  position: relative;
+}
+
 .nav>.nav-item {
   display: flex;
-  width: 100%;
-  margin-bottom: 30rpx;
   align-items: center;
   justify-content: center;
-  background-color: #ddd;
-  padding: 20rpx;
+  background-color: #dddddd;
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 20rpx;
+  margin: 40rpx 0 0;
+  box-shadow: 10rpx 10rpx 10rpx 0 #e7e7e7;
 }
+
+/* .nav>.nav-item:nth-child(-n + 4) {
+  
+} */
+
+/* .nav>.nav-item:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+

@@ -1,5 +1,7 @@
 /* pages/register/register.wxss */
-
+.box {
+  padding: 0 20rpx;
+}
 .box>.form-item {
   display: flex;
   width: 100%;
@@ -7,13 +9,18 @@
   margin-bottom: 10px;
   border-bottom: 1rpx solid #ddd;
   box-sizing: border-box;
-  padding-left: 20rpx;
 }
-
+.box>.form-item input {
+  padding-bottom: 20rpx;
+}
 .box>.form-item>view {
   width: 100%;
-  margin-bottom: 10rpx;
+  margin-bottom: 35rpx;
 }
 .must {
+  margin-right: 10rpx;
   color: red;
+}
+.form-submit {
+  padding: 20rpx 0;
 }

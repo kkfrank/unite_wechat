@@ -1,40 +1,13 @@
-// pages/nav/nav.js
+// pages/user/user.js
 Page({
-  /**
-   * 用户跳转不同的nav
-   */
-  switchNav(e) {
-    wx.navigateTo({
-      url: e.target.dataset.url
-    })
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    navList:[
-      {
-        name: '评论',
-        url: '../argument/list/list'
-      },
-      {
-        name: '赞助商',
-        url: '../sponsors/list/list'
-      },
-      {
-        name: '场地',
-        url: '../place/list/list'
-      },
-      {
-        name: '讲师',
-        url: '../teacher/list/list'
-      },
-      {
-        name: '个人中心',
-        url: '../user/user'
-      }
-    ]
+
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

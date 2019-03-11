@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/nav/nav",
     "pages/register/register",
     "pages/place/list/list",
-    "pages/nav/nav",
     "pages/argument/list/list",
     "pages/argument/detail/detail",
     "pages/teacher/list/list",
@@ -16,7 +16,8 @@
     "pages/place/detailVR/detailVR",
     "pages/place/detail3D/detail3D",
     "pages/place/detail2D/detail2D",
-    "pages/place/detailSubs/detailSubs"
+    "pages/place/detailSubs/detailSubs",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",
