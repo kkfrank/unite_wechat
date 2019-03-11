@@ -1,6 +1,14 @@
 // pages/argument/detail/detail.js
 Page({
   /***
+   * 用户点击提交按钮
+   */
+  submit () {
+    wx.redirectTo({
+      url: '../list/list',
+    })
+  },
+  /***
    * 用户点击星星，进行评分
    */
   changeStar(e) {

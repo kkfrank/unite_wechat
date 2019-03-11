@@ -25,7 +25,7 @@
     </view>
   <view class="submit-item">
     <view class="item-submit">
-      <button>提交</button>
+      <button bindtap="submit">提交</button>
     </view>
   </view>
 </view>
