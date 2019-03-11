@@ -8,6 +8,9 @@ Page({
     teacher: {
       url: 'https://10.url.cn/eth/ajNVdqHZLLCIgUe7QmgPibps3nDVKYMUYKu8Q0yP7qjUMDhm1KXd0JEdO19soD9icicq7Umo5Ua7Cs/',
       name: '悟空',
+      startTime: '2019-09-02 10:00',
+      endTime: '2019-10-02 12:00',
+      place: '上海交通大学',
       profession: '高级讲师',
       result: '一年店铺销售额两千万上亿企业运营总监',
       advantage: '搜索优化、直通ada',
@@ -18,56 +21,56 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

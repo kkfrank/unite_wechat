@@ -2,7 +2,7 @@
 
 .item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   border-bottom: 1rpx solid #ddd;
   padding: 20rpx 0;
   font-size: 32rpx;
@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 0 10rpx;
 }
 
@@ -21,12 +22,27 @@
   height: 100rpx;
 }
 
-.content {
+.teacher-list .content {
   padding: 0 10rpx;
-  line-height: 60rpx;
+  line-height: 52rpx;
   display: -webkit-box;
   text-indent: 80rpx;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.activity-list .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 500rpx;
+  padding: 0 10rpx;
+}
+.activity-list .content>view:last-child {
+  line-height: 52rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   overflow: hidden;
 }

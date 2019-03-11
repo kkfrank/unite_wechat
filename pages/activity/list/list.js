@@ -1,13 +1,58 @@
 // pages/argument/list/list.js
 Page({
-
+  // 修改activTab
+  changeActiveTab() {
+    let list = JSON.parse(JSON.stringify(this.data.tabList))
+    list.map((ele, index) => {
+      if (index === this.data.currentTab) {
+        ele.isActive = true
+      } else {
+        ele.isActive = false
+      }
+    })
+    this.setData({
+      'tabList': list
+    })
+  },
+  // 点击标题切换当前页时改变样式
+  swichNav: function(e) {
+    let cur = e.target.dataset.current
+    this.setData({
+      'currentTab': cur
+    })
+    this.changeActiveTab()
+  },
+  // 滚动切换标签样式
+  switchTab: function(e) {
+    this.setData({
+      currentTab: e.detail.current
+    });
+    this.changeActiveTab()
+  },
   /**
    * 页面的初始数据
    */
   data: {
+    currentTab: 0,
+    tabList: [{
+        name: '未开始',
+        isActive: true
+      },
+      {
+        name: '进行中',
+        isActive: false
+      },
+      {
+        name: '评价',
+        isActive: false
+      }
+    ],
     list: [{
       url: 'https://10.url.cn/eth/ajNVdqHZLLCIgUe7QmgPibps3nDVKYMUYKu8Q0yP7qjUMDhm1KXd0JEdO19soD9icicq7Umo5Ua7Cs/',
       name: '悟空',
+      startTime: '2019-09-02',
+      endTime: '2019-10-02',
+      place: '上海交通大学',
       profession: '高级讲师',
       result: '一年店铺销售额两千万上亿企业运营总监',
       advantage: '搜索优化、直通ada',
@@ -15,6 +60,9 @@ Page({
     }, {
       url: 'https://10.url.cn/eth/ajNVdqHZLLCIgUe7QmgPibps3nDVKYMUYKu8Q0yP7qjUMDhm1KXd0JEdO19soD9icicq7Umo5Ua7Cs/',
       name: '悟空',
+      startTime: '2019-09-02',
+      endTime: '2019-10-02',
+      place: '上海交通大学',
       profession: '高级讲师',
       result: '一年店铺销售额两千万上亿企业运营总监',
       advantage: '搜索优化、直通ada',

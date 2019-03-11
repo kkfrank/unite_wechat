@@ -1,2 +1,27 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="user-box">
+  <view class="info-box">
+    <view class="user-item">
+      <view>姓名</view>
+      <view>{{user.name}}</view>
+    </view>
+    <view class="user-item">
+      <view>邮箱</view>
+      <view>{{user.email}}</view>
+    </view>
+    <view class="user-item">
+      <view>职位</view>
+      <view>{{user.profession}}</view>
+    </view>
+    <view class="user-item">
+      <view>公司</view>
+      <view>{{user.company}}</view>
+    </view>
+  </view>
+  <view class="link-box">
+    <view class="user-item">
+      <view>我的评论</view>
+      <view>></view>
+    </view>
+  </view>
+</view>

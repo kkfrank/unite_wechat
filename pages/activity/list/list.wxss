@@ -1,0 +1,21 @@
+/* pages/argument/list/list.wxss */
+.tab {
+  display: flex;
+  justify-content: space-around;
+  height: 80rpx;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.tab>view {
+  flex: 1;
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+.swiper {
+  min-height: 1200rpx;
+}
+.active-tab {
+  color:  #40a9ff;
+  border-bottom: 1rpx solid #40a9ff;
+}

@@ -1,5 +1,11 @@
 // pages/nav/nav.js
 Page({
+  // 用户点击tips，查看相应活动
+  toDetail () {
+    wx.navigateTo({
+      url: '../activity/detail/detail',
+    })
+  },
   /**
    * 用户跳转不同的nav
    */
@@ -12,10 +18,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tips: '现在王老师正在讲课，是否前往?',
     navList:[
       {
-        name: '评论',
-        url: '../argument/list/list'
+        name: '活动',
+        url: '../activity/list/list'
       },
       {
         name: '赞助商',

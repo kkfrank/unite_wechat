@@ -1,6 +1,6 @@
 <!--pages/teacher/teacher.wxml-->
 <view class="teacher-box">
-  <view class="teacher-item header-item" >
+  <view class="teacher-item header-item">
     <view class="item-image">
       <image src='{{teacher.url}}'></image>
     </view>
@@ -10,7 +10,7 @@
       <text></text>
     </view>
   </view>
-  <view class="teacher-item" >
+  <view class="teacher-item">
     <view class="item-argument">
       <view class="item-label">
         <text>讲师讲课水平：</text>
@@ -18,10 +18,12 @@
       <view class="star-box">
         <view wx:for="{{starList}}" class="iconfont {{item.className}}" data-index="{{index}}" bindtap="changeStar"></view>
       </view>
-      <textarea placeholder='请输入建议'></textarea>
     </view>
   </view>
-  <view class="teacher-item" >
+  <view class="teacher-item">
+      <textarea placeholder='请输入建议'></textarea>
+    </view>
+  <view class="submit-item">
     <view class="item-submit">
       <button>提交</button>
     </view>

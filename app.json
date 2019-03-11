@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/nav/nav",
     "pages/register/register",
+    "pages/nav/nav",
+    "pages/activity/argument/argument",
+    "pages/activity/list/list",
+    "pages/activity/detail/detail",
     "pages/place/list/list",
-    "pages/argument/list/list",
-    "pages/argument/detail/detail",
     "pages/teacher/list/list",
     "pages/teacher/detail/detail",
     "pages/support/detail/detail",
@@ -17,6 +18,7 @@
     "pages/place/detail3D/detail3D",
     "pages/place/detail2D/detail2D",
     "pages/place/detailSubs/detailSubs",
+    "pages/test/test",
     "pages/user/user"
   ],
   "window": {

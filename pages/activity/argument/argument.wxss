@@ -3,6 +3,7 @@
 .header-item {
   display: flex;
   justify-content: space-between;
+  line-height: 60rpx;
 }
 .header-item image{
   width: 100rpx;
@@ -18,5 +19,14 @@
 }
 .iconfont {
   font-size: 64rpx;
-  w
+}
+.teacher-item {
+  padding: 10rpx 20rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #ddd;
+  color:#666;
+}
+.submit-item {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
 }

@@ -15,6 +15,16 @@
       </view>
     </view>
   </view>
+  <view class="item">
+    <view>
+      <text>时间</text>
+      <text>{{teacher.startTime}}~{{teacher.endTime}}</text>
+    </view>
+    <view>
+      <text>地点</text>
+      <text>{{teacher.place}}</text>
+    </view>
+  </view>
   <view class="item-description">
     课程描述:
     <text>{{teacher.description}}</text>
