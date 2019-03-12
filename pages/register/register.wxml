@@ -4,7 +4,7 @@
     <view>
       <text class="must">*</text><text>邮箱</text>
     </view>
-    <input type="text" placeholder="请输入邮箱" bindinput="bindEmailInput"value="{{user.email}}"/>
+    <input focus="true" type="text" placeholder="请输入邮箱" bindinput="bindEmailInput"value="{{user.email}}"/>
   </view>
   <view class="form-item">
     <view>
