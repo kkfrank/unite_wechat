@@ -11,7 +11,7 @@
     "pages/support/detail/detail",
     "pages/support/list/list",
     "pages/sponsors/list/list",
-
+    "pages/sponsors/detail/detail",
     "pages/test/test",
     "pages/user/user",
     "pages/place/detail3D/detail3D",
