@@ -1,4 +1,3 @@
-import config from './utils/config'
 import { userApi } from '/api/main.js';
 import * as util from '/utils/util.js'
 //app.js
