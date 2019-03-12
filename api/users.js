@@ -1,4 +1,4 @@
-import { request} from './request1.js'
+import { request} from './request.js'
 
 function register(params = {}) {
   return request('post', `/users`, params);

@@ -1,4 +1,4 @@
-import { request } from './request1.js'
+import { request } from './request.js'
 
 function getDetail(id,params={}){
   return request('get',`/sponsors/${id}`,params);
