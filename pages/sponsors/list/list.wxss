@@ -1,15 +1,42 @@
-.sponsors-item{
-  display: flex;
+.sponsors{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  margin:10rpx;
 }
+
 .sponsors-item{
-  display: flex;
-  align-items:center;
-  border-bottom:1px solid #ddd;
- padding:20rpx;
+  /* width:45%; */
+   width:100%;
 }
+.sponsors-item navigator{
+ display: flex;
+ align-items:center;
+ height: 200rpx;
+  padding:20rpx;
+  box-sizing:border-box;
+  margin:20rpx;
+  background-color:#dedede;
+  border-radius:8px; 
+  box-shadow:10rpx 10rpx 10rpx 0 #e7e7e7;
+}
+.sponsors-item image{
+    flex-shrink:0;
+}
+.sponsors-item .sponsors-item-info{
+    flex-grow:1;
+}
+.sponsors-item-info .name, .sponsors-item-info .brief,{
+  
+}
+
 .sponsors-item:first-child{
   border-top:1px solid #ddd;
 }
 .sponsors-item-info{
   margin-left: 10rpx;
 }
+
+/* .sponsors-item-info .txt-ellipsis{
+  -webkit-line-clamp:2;
+} */

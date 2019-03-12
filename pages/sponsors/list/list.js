@@ -1,18 +1,47 @@
 import { sponsors } from '../../../mockdata/sponsors.js';
+import {sponsorsApi} from '../../../api/main.js';
+import * as util from '../../../utils/util.js'
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
   data: {
-    sponsors: sponsors
+    //sponsors: sponsors
+    sponsors: [],
+    sponsorType:{
+      "0":"金牌赞助商",
+      "1": "银牌赞助商",
+      "2": "铜牌赞助商",
+    }
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    util.showLoading();
+    const list = sponsorsApi.search().then(res=>{
+      console.log(res)
+      if(res.data){
+        this.setData({
+          sponsors:res.data.list
+        })
+      }
+    }).catch(error=>{
+      console.log(error)
+    }).finally(()=>{
+        util.hideLoading();
+      //模拟数据
+      this.setData({
+        //sponsors: sponsors
+        sponsors: this.solveSponsors(sponsors)
+      })
+    });
+  },
+  solveSponsors: function (sponsors){
+    return sponsors.sort((a,b)=>{
+      return a.type - b.type
+    })
   },
 
   /**

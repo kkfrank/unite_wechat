@@ -1,7 +1,9 @@
 .detail {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  margin:8px;
+  justify-content:center;
 }
+
 

@@ -1,3 +1,6 @@
+import config from './utils/config'
+import { userApi } from '/api/main.js';
+import * as util from '/utils/util.js'
 //app.js
 App({
   onLaunch: function () {
@@ -10,6 +13,13 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        userApi.login(res.code).then(data=>{
+          console.log('success', data)
+        }).catch(err=>{
+          console.log('err', err)
+        }).finally(()=>{
+
+        })
       }
     })
     // 获取用户信息

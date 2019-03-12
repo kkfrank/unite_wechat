@@ -1,4 +1,6 @@
 // pages/register/register.js
+import { userApi } from '../../api/main.js';
+import * as util from '../../utils/util.js'
 Page({
   /***
    * 监听用户输入邮箱
@@ -36,8 +38,28 @@ Page({
         duration: 2000
       })
     } else {
-      wx.redirectTo({
-        url: '../nav/nav',
+      util.showLoading();
+      let { email, profession, company} = this.data.user
+      userApi.register({
+        "email": email,
+        "company": company,
+        "position": profession
+      }).then(res =>{
+        console.log('res', res)
+        if(res && res.code === '200'){
+          wx.redirectTo({
+            url: '../nav/nav',
+          })
+        }
+      }).catch(error =>{
+        console.log('error',error)
+        util.showToast({title:error.errMsg})
+      }).finally(()=>{
+        util.hideLoading();
+        //
+        wx.redirectTo({
+          url: '../nav/nav',
+        })
       })
     }
     // console.log(e.detail.errMsg)

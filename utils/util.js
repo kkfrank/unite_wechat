@@ -14,6 +14,31 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-module.exports = {
-  formatTime: formatTime
+function showLoading(options={}){
+  let { mask, title } = options;
+  console.log(mask,title)
+  wx.showLoading({
+    mask: mask === undefined ? true : mask,
+    title: title || '加载中',
+  })
+}
+
+function hideLoading(){
+  wx.hideLoading();
+}
+
+function showToast(options = {}){
+  let { title, icon, duration} = options;
+  wx.showToast({
+    title: title,
+    icon: icon || 'none',
+    duration: duration || 2000
+  })
+}
+export{
+  //or formatTime as something
+  formatTime,
+  showLoading,
+  hideLoading,
+  showToast
 }

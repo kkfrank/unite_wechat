@@ -1,9 +1,9 @@
 <view class='detail'>
-  <image src="{{item.img}}" style="width:100px;height:100px"></image>
-  <view>
+  <image src="{{item.imgurl}}" style="width:100px;height:100px"></image>
+  <view class='mt20 mb20'>
     {{item.name}}
   </view>
-  <view>
-    {{item.desc}}
+  <view class=''>
+    {{item.detail}}
   </view>
 </view>

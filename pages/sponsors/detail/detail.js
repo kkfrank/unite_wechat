@@ -1,3 +1,6 @@
+import { sponsorsApi } from '../../../api/main.js';
+import * as util from '../../../utils/util.js'
+
 Page({
 
   /**
@@ -11,12 +14,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      item:{
-        name: "some-name",
-        desc: "some-info",
-        img:'http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png'
-      }
+    util.showLoading()
+    sponsorsApi.getDetail(options.id).then(res=>{
+      console.log(res)
+      this.setData({
+        item:res.data
+      })
+    }).catch(err =>{
+      console.log(err)
+    }).finally((v)=>{
+      console.log(v)
+      util.hideLoading()
+      //模拟数据
+      this.setData({
+        item: {
+          id: "10",
+          imgurl: "http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png",
+          name: "name62",
+          detail: "ablskdjfs"
+        }
+      })
     })
   },
 
