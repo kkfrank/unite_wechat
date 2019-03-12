@@ -1,10 +1,9 @@
 
-
 page {
   background: #f1f1f1;
   font-size: 28rpx;
   color: #333;
-  font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, sans-serif
 }
 
 view, text, scroll-view, swiper, button, form, input, textarea, label, navigator,
@@ -649,11 +648,7 @@ button.icon.lg {
 .cu-btn[disabled] {
   opacity: 0.6;
   color: #fff;
-}
-
-/* ==================
-          徽章
- ==================== */
+} 
 
 .cu-tag {
   font-size: 24rpx;

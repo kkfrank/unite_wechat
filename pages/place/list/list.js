@@ -53,17 +53,17 @@ Component({
   },
   methods: {
     onLoad() {
-      let that = this;
-      // 获取用户信息
-      wx.getSetting({
-        success: res => {
-          if (!res.authSetting['scope.userInfo']) {
-            wx.redirectTo({
-              url: '/pages/auth/auth'
-            })
-          }
-        }
-      })
+      // let that = this;
+      // // 获取用户信息
+      // wx.getSetting({
+      //   success: res => {
+      //     if (!res.authSetting['scope.userInfo']) {
+      //       wx.redirectTo({
+      //         url: ''
+      //       })
+      //     }
+      //   }
+      // })
     },
     showModal(e) {
       this.setData({

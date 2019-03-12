@@ -1,2 +1,12 @@
-<!--pages/place/detailAR/detailAR.wxml-->
-<text>pages/place/detailAR/detailAR.wxml</text>
+<!--pages/place/place.wxml-->
+<view class="place-box">
+  <view class="place-item">
+      <image class="place-image" src='http://file2.zhituad.com/thumb/201204/13/201204130158482942LTfUt_priv.jpg'></image>
+    <view class="place-block">
+      <view class="block-item">东南</view>
+      <view class="block-item">西北</view>
+      <view class="block-item">东北</view>
+      <view class="block-item">西南</view>
+    </view>
+  </view>
+</view>

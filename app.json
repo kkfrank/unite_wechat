@@ -1,25 +1,26 @@
 {
   "pages": [
     "pages/register/register",
+    "pages/place/list/list",
     "pages/nav/nav",
     "pages/activity/argument/argument",
     "pages/activity/list/list",
     "pages/activity/detail/detail",
-    "pages/place/list/list",
     "pages/teacher/list/list",
     "pages/teacher/detail/detail",
     "pages/support/detail/detail",
     "pages/support/list/list",
     "pages/sponsors/list/list",
-    "pages/sponsors/detail/detail",
-    "pages/place/detailAR/detailAR",
-    "pages/place/detailAsset/detailAsset",
-    "pages/place/detailVR/detailVR",
-    "pages/place/detail3D/detail3D",
-    "pages/place/detail2D/detail2D",
-    "pages/place/detailSubs/detailSubs",
+
     "pages/test/test",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/place/detail3D/detail3D",
+    "pages/place/detailVR/detailVR",
+    "pages/place/detailAR/detailAR",
+    "pages/place/detail2D/detail2D",
+    "pages/place/detailAsset/detailAsset",
+    "pages/place/detailSubs/detailSubs"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
