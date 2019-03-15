@@ -30,7 +30,7 @@ Page({
    * 点击这册按钮进行注册
    */
   register(e) {
-    let reg = new RegExp('^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$')
+    let reg = reg_mail = /^(.+)@(.+){1,}\.(.+)$/
     if(!reg.test(this.data.user.email)){
       wx.showToast({
         title: '邮箱格式错误',
