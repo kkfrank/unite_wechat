@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/register/register",
+    "pages/index/index",
     "pages/nav/nav",
+    "pages/register/register",
     "pages/place/list/list",
     "pages/activity/argument/argument",
     "pages/activity/list/list",
@@ -18,7 +19,6 @@
     "pages/place/detail2D/detail2D",
     "pages/place/detailAsset/detailAsset",
     "pages/place/detailSubs/detailSubs"
-
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,7 +29,7 @@
   "usingComponents": {
     "list": "components/list/list"
   },
-  "networkTimeout":{
+  "networkTimeout": {
     "request": 20000,
     "downloadFile": 20000
   }

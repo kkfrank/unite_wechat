@@ -1,0 +1,8 @@
+<view class="nav">
+  <view class="nav-item" wx:for="{{navList}}" bindtap="switchNav" data-url="{{item.url}}">
+    {{item.name}}
+  </view>
+  <view class="tips" bindtap="toDetail">
+    <text>{{tips}}</text>
+  </view>
+</view>

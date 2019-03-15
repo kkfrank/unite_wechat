@@ -26,22 +26,23 @@ Page({
     })
     return
     util.showLoading();
-    const list = sponsorsApi.search().then(res=>{
+    var openId =wx.getStorageSync('openId');
+    var skey =wx.getStorageSync('skey');
+    const list = sponsorsApi.search({ openId: openId, sessionKey:skey}).then(res=>{
       console.log(res)
       if(res.data){
         this.setData({
           sponsors:res.data.list
         })
-      }
+      } 
     }).catch(error=>{
       console.log(error)
     }).finally(()=>{
         util.hideLoading();
       //模拟数据
-      this.setData({
-        //sponsors: sponsors
-        sponsors: this.solveSponsors(sponsors)
-      })
+      // this.setData({
+      //   sponsors: this.solveSponsors(sponsors)
+      // })
     });
   },
   solveSponsors: function (sponsors){

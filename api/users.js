@@ -8,12 +8,12 @@ function login(code){
   return request('get', `/users/code2session`, {code:code});
 }
 
-function getByOpenId(openId){
-  return request('get', `/users/by-openId`, { openId:openId})
+function getByUnionId(unionId){
+  return request('get', `/users/by-unionId`, { unionId:openId})
 }
 
 export {
   register,
   login,
-  getByOpenId
+  getByUnionId
 }

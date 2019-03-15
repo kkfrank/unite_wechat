@@ -38,16 +38,19 @@ Page({
         duration: 2000
       })
     } else {
-      wx.redirectTo({
-        url: '../nav/nav',
-      })
-      return
+      // wx.redirectTo({
+      //   url: '../nav/nav',
+      // })
+      // return
       util.showLoading();
+      let openId = wx.getStorageSync('openId');
       let { email, profession, company} = this.data.user
+      console.log('register', openId)
       userApi.register({
         "email": email,
         "company": company,
-        "position": profession
+        "position": profession,
+        "openId": openId
       }).then(res =>{
         console.log('res', res)
         if(res && res.code === '200'){

@@ -10,14 +10,14 @@ var sponsors = [
     id: "2",
     type: "0",
     imgurl: "http://ucsdcssa.org/wp-content/uploads/2018/01/Melody.png",
-    name: "马大嫂 Private Kitchen",
+    name: "Private Kitchen",
     brief: "sdfsdf"
   },
   {
     id: "3",
     type: "1",
     imgurl: "http://ucsdcssa.org/wp-content/uploads/2018/01/Melody.png",
-    name: "马大嫂 Private Kitchen",
+    name: "Private Kitchen",
     brief: "sdfsdf"
   },
   {
