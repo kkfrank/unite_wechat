@@ -19,6 +19,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //模拟数据
+    this.setData({
+      //sponsors: sponsors
+      sponsors: this.solveSponsors(sponsors)
+    })
+    return
     util.showLoading();
     const list = sponsorsApi.search().then(res=>{
       console.log(res)

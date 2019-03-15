@@ -38,6 +38,10 @@ Page({
         duration: 2000
       })
     } else {
+      wx.redirectTo({
+        url: '../nav/nav',
+      })
+      return
       util.showLoading();
       let { email, profession, company} = this.data.user
       userApi.register({

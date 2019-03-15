@@ -14,6 +14,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //模拟数据
+    this.setData({
+      item: {
+        id: "10",
+        imgurl: "http://ucsdcssa.org/wp-content/uploads/2018/01/unnamed-file.png",
+        name: "name62",
+        detail: "ablskdjfs"
+      }
+    })
+    return
     util.showLoading()
     sponsorsApi.getDetail(options.id).then(res=>{
       console.log(res)
