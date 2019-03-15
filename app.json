@@ -28,5 +28,9 @@
   },
   "usingComponents": {
     "list": "components/list/list"
+  },
+  "networkTimeout":{
+    "request": 20000,
+    "downloadFile": 20000
   }
 }
