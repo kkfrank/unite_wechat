@@ -1,15 +1,13 @@
 {
   "pages": [
     "pages/register/register",
-    "pages/place/list/list",
     "pages/nav/nav",
+    "pages/place/list/list",
     "pages/activity/argument/argument",
     "pages/activity/list/list",
     "pages/activity/detail/detail",
     "pages/teacher/list/list",
     "pages/teacher/detail/detail",
-    "pages/support/detail/detail",
-    "pages/support/list/list",
     "pages/sponsors/list/list",
     "pages/sponsors/detail/detail",
     "pages/test/test",
