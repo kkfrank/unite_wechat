@@ -39,6 +39,10 @@ Page({
       {
         name: '个人中心',
         url: '../user/user/user'
+      },
+      {
+        name: '关于Unity',
+        url: '../unity/unity'
       }
     ]
   },

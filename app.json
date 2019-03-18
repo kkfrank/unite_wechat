@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/nav/nav",
     "pages/index/index",
     "pages/register/register",
     "pages/user/argument/argument",
-    "pages/nav/nav",
     "pages/place/list/list",
     "pages/activity/argument/argument",
     "pages/activity/list/list",
@@ -19,8 +19,9 @@
     "pages/place/detail2D/detail2D",
     "pages/place/detailAsset/detailAsset",
     "pages/place/detailSubs/detailSubs",
-
-    "pages/user/user/user"
+    "pages/user/user/user",
+    "pages/unity/unity",
+    "pages/user/gift/gift"
   ],
   "window": {
     "backgroundTextStyle": "light",

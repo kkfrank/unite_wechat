@@ -4,8 +4,8 @@
     <view wx:for="{{tabList}}" bindtap="swichNav" data-current="{{index}}" class="{{item.isActive?'active-tab':''}}">{{item.name}}</view>
   </view>
   <swiper class="swiper" current="{{currentTab}}" interval="false" duration="1000" bindchange="switchTab">
-    <swiper-item wx:for="{{[0,1,2]}}">
-      <list list="{{list}}" typeName="{{item === 2?'argument': 'activity'}}"></list>
+    <swiper-item wx:for="{{[0,1,2,3]}}">
+      <list list="{{list}}" typeName="{{item === 3?'argument': 'activity'}}"></list>
     </swiper-item>
   </swiper>
 </view>

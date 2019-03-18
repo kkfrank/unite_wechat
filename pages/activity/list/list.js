@@ -35,8 +35,11 @@ Page({
   data: {
     currentTab: 0,
     tabList: [{
-        name: '未开始',
+        name: '全部',
         isActive: true
+      }, {
+        name: '未开始',
+        isActive: false
       },
       {
         name: '进行中',

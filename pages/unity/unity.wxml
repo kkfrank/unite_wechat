@@ -1,0 +1,16 @@
+<view class="box">
+  <view class="logo-box">
+    <image src='../../images/unity.jpg'></image>
+    <view class="title-box">
+      <text>Unity 官方平台</text>
+    </view>
+    <view class="content-box">
+      <text>Unity也汇集了一些世界上最优秀的人，并让他们轻松地为客户解决有趣和繁杂的问题。我们积极地再投资于研发，推动Unity不断发展并迅速成长，扩大可用性、提高性能和平台覆盖范围。</text>
+    </view>
+    <view class="contact-box">
+      <view>微信：{{wechat}}</view>
+      <view>联系方式：{{telephone}}</view>
+      <view>网址：{{url}}</view>
+    </view>
+  </view>
+</view>
