@@ -42,6 +42,11 @@ Component({
           url: '../detail/detail',
         })
       }
+      if (this.properties.typeName === 'lesson') {
+        wx.navigateTo({
+          url: '../../activity/detail/detail',
+        })
+      }
       if (this.properties.typeName === 'activity') {
         wx.navigateTo({
           url: '../detail/detail',

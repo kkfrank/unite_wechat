@@ -15,8 +15,5 @@
       </view>
     </view>
   </view>
-  <view class="item-description">
-    课程描述:
-    <text>{{teacher.description}}</text>
-  </view>
+  <list list="{{list}}" typeName="lesson"></list>
 </view>

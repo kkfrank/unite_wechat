@@ -35,6 +35,10 @@
 		"miniprogram": {
 			"current": -1,
 			"list": []
-		}
+		},
+    "networkTimeout": {
+      "request": 2000,
+      "downloadFile": 10000
+    }
 	}
 }
