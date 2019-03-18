@@ -1,12 +1,8 @@
 import { userApi } from '../../api/main.js';
 import * as util from '../../utils/util.js'
 Page({
-  data: {
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  // 点击‘走进unity'跳转到首页
+  toUnity() {
     util.showLoading();
     //for test
     wx.clearStorage()
@@ -27,6 +23,14 @@ Page({
     } else {//first login
       this.doLogin();
     }
+  },
+  data: {
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
   },
 
   /**
