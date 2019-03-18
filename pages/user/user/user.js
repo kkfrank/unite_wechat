@@ -1,6 +1,11 @@
 // pages/user/user.js
 Page({
-
+  // 点击我的评论，去我的评论页面
+  toMyArument() {
+    wx.navigateTo({
+      url: '../argument/argument',
+    })
+  },
   /**
    * 页面的初始数据
    */

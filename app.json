@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/nav/nav",
     "pages/register/register",
+    "pages/user/argument/argument",
+    "pages/nav/nav",
+    "pages/index/index",
     "pages/place/list/list",
     "pages/activity/argument/argument",
     "pages/activity/list/list",
@@ -12,13 +13,14 @@
     "pages/sponsors/list/list",
     "pages/sponsors/detail/detail",
     "pages/test/test",
-    "pages/user/user",
     "pages/place/detail3D/detail3D",
     "pages/place/detailVR/detailVR",
     "pages/place/detailAR/detailAR",
     "pages/place/detail2D/detail2D",
     "pages/place/detailAsset/detailAsset",
-    "pages/place/detailSubs/detailSubs"
+    "pages/place/detailSubs/detailSubs",
+
+    "pages/user/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",

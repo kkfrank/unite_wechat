@@ -1,13 +1,25 @@
 // pages/register/register.js
-import { userApi } from '../../api/main.js';
+import {
+  userApi
+} from '../../api/main.js';
 import * as util from '../../utils/util.js'
 Page({
+  /***
+   * 监听用户选择行业
+   */
+  bindIndustriesChange(e) {
+    let index = e.detail.value
+    this.setData({
+      'user.industry': this.data.industries[index]
+    })
+    console.log(e)
+  },
   /***
    * 监听用户输入邮箱
    */
   bindEmailInput(e) {
     this.setData({
-      'user.email':e.detail.value
+      'user.email': e.detail.value
     })
   },
   /***
@@ -31,44 +43,54 @@ Page({
    */
   register(e) {
     let reg = /^(.+)@(.+){1,}\.(.+)$/
-    if(!reg.test(this.data.user.email)){
+    if (!reg.test(this.data.user.email)) {
       wx.showToast({
         title: '邮箱格式错误',
         icon: 'none',
         duration: 2000
       })
-    } else {
-      // wx.redirectTo({
-      //   url: '../nav/nav',
-      // })
-      // return
-      util.showLoading();
-      let openId = wx.getStorageSync('openId');
-      let { email, profession, company} = this.data.user
-      console.log('register', openId)
-      userApi.register({
-        "email": email,
-        "company": company,
-        "position": profession,
-        "openId": openId
-      }).then(res =>{
-        console.log('res', res)
-        if(res && res.code === '200'){
-          wx.redirectTo({
-            url: '../nav/nav',
-          })
-        }
-      }).catch(error =>{
-        console.log('error',error)
-        util.showToast({title:error.errMsg})
-      }).finally(()=>{
-        util.hideLoading();
-        //
+      return false
+    }
+    if (!this.data.user.company) {
+      wx.showToast({
+        title: '请填入公司',
+        icon: 'none',
+        duration: 2000
+      })
+      return false
+    }
+    util.showLoading();
+    let openId = wx.getStorageSync('openId');
+    let {
+      email,
+      profession,
+      company
+    } = this.data.user
+    userApi.register({
+      "email": email,
+      "company": company,
+      "position": profession,
+      "openId": openId
+    }).then(res => {
+      console.log('res', res)
+      if (res && res.code === '200') {
         wx.redirectTo({
           url: '../nav/nav',
         })
+      }
+    }).catch(error => {
+      console.log('error', error)
+      util.showToast({
+        title: error.errMsg
       })
-    }
+    }).finally(() => {
+      util.hideLoading();
+      //
+      wx.redirectTo({
+        url: '../nav/nav',
+      })
+    })
+
     // console.log(e.detail.errMsg)
     // console.log(e.detail.iv)
     // console.log(e.detail.encryptedData)
@@ -77,7 +99,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    industries: ['IT', '机械', '互联网'],
     user: {
+      industry: null,
       email: null,
       profession: null,
       company: null
@@ -87,56 +111,56 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

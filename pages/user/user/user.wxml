@@ -19,9 +19,9 @@
     </view>
   </view>
   <view class="link-box">
-    <view class="user-item">
+    <view class="user-item" bindtap='toMyArument'>
       <view>我的评论</view>
-      <view>></view>
+      <view><text class="iconfont icon-more"></text></view>
     </view>
   </view>
 </view>

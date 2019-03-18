@@ -1,0 +1,4 @@
+<!--pages/user/argument/argument.wxml-->
+<view>
+  <list list="{{list}}" typeName="argument"></list>
+</view>

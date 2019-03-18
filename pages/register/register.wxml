@@ -2,21 +2,34 @@
 <view class="box mt40">
   <view class="form-item">
     <view>
-      <text class="must">*</text><text>邮箱</text>
+      <text class="must">*</text>
+      <text>邮箱</text>
     </view>
-    <input focus="true" type="text" placeholder="请输入邮箱" bindinput="bindEmailInput"value="{{user.email}}"/>
+    <input focus="true" type="text" placeholder="请输入邮箱" bindinput="bindEmailInput" value="{{user.email}}" />
+  </view>
+  <view class="form-item">
+    <view>
+      <text class="must">*</text>
+      <text>公司</text>
+    </view>
+    <input type="text" placeholder="请输入公司" bindinput="bindCompanyInput" value="{{user.company}}" />
+  </view>
+  <view class="form-item">
+    <view>
+      <text>行业</text>
+    </view>
+    <picker bindchange="bindIndustriesChange" value="{{index}}" range="{{industries}}">
+      <view class="picker" wx:if="{{user.industry}}">
+        {{user.industry}}
+      </view>
+      <input wx:else type="text" placeholder="请选择行业" />
+    </picker>
   </view>
   <view class="form-item">
     <view>
       <text>职位</text>
     </view>
-    <input type="text" placeholder="请输入职位"  bindinput="bindProfessionInput"value="{{user.profession}}"/>
-  </view>
-  <view class="form-item">
-    <view>
-      <text>公司</text>
-    </view>
-    <input type="text" placeholder="请输入公司"  bindinput="bindCompanyInput"value="{{user.company}}"/>
+    <input type="text" placeholder="请输入职位" bindinput="bindProfessionInput" value="{{user.profession}}" />
   </view>
   <view class="form-submit">
     <!-- <button open-type="getPhoneNumber" bindgetphonenumber="register">注册</button> -->

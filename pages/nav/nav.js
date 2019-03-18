@@ -38,7 +38,7 @@ Page({
       },
       {
         name: '个人中心',
-        url: '../user/user'
+        url: '../user/user/user'
       }
     ]
   },
