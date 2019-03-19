@@ -1,20 +1,5 @@
 <!--pages/detail/detail.wxml-->
 <view class="detail-box">
-  <view class="detail-item">
-    <view class="item-image">
-      <image src='{{detail.url}}'></image>
-    </view>
-    <view>
-      <view class="item-title">
-        姓名:
-        <text>{{detail.profession}}-{{detail.name}}</text>
-      </view>
-      <view class="item-title">
-        优势:
-        <text>{{detail.advantage}}</text>
-      </view>
-    </view>
-  </view>
   <view class="item">
     <view>
       <text>课程</text>
@@ -30,7 +15,22 @@
     </view>
   </view>
   <view class="item-description">
-    课程描述:
+    课程简介:
     <text>{{detail.description}}</text>
+  </view>
+  <view class="detail-item">
+    <view class="item-image">
+      <image src='{{detail.url}}'></image>
+    </view>
+    <view>
+      <view class="item-title">
+        讲师姓名:
+        <text>{{detail.profession}}-{{detail.name}}</text>
+      </view>
+      <view class="item-title">
+        简介:
+        <text>{{detail.advantage}}</text>
+      </view>
+    </view>
   </view>
 </view>

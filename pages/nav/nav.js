@@ -37,6 +37,10 @@ Page({
         url: '../teacher/list/list'
       },
       {
+        name: '调查问卷',
+        url: '../survey/list/list'
+      },
+      {
         name: '个人中心',
         url: '../user/user/user'
       },

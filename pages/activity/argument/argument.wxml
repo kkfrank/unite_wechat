@@ -5,8 +5,8 @@
       <image src='{{teacher.url}}'></image>
     </view>
     <view class="item-title">
-      <view>职称:{{teacher.profession}}</view>
-      <view>姓名:{{teacher.name}}</view>
+      <view>课程名称:xxx</view>
+      <view>讲师:{{teacher.name}}</view>
       <text></text>
     </view>
   </view>

@@ -14,7 +14,7 @@
     </view>
   </view>
 </view>
-<view class="list activity-list" wx:if="{{typeName==='activity' ||typeName==='argument' }}">
+<view class="list activity-list" wx:if="{{typeName==='activity' }}">
   <view class="item" wx:for="{{list}}" bindtap="toDetail" data-item="{{item}}">
     <view class="left">
       <view>
@@ -60,7 +60,7 @@
     </view>
   </view>
 </view>
-<view class="list activity-list" wx:if="{{typeName==='agenda' }}">
+<view class="list activity-list" wx:if="{{typeName==='agenda'||typeName==='argument' }}">
   <view class="item" wx:for="{{list}}" bindtap="toDetail" data-item="{{item}}">
     <view class="left">
       <view>
@@ -83,7 +83,7 @@
         时间: {{item.startTime}}~{{item.endTime}}
       </view>
       <view>
-        介绍: {{item.description}}
+        简介: {{item.description}}
       </view>
     </view>
   </view>

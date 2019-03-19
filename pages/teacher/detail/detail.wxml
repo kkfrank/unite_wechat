@@ -10,7 +10,7 @@
         <text>{{teacher.profession}}-{{teacher.name}}</text>
       </view>
       <view class="item-title">
-        优势:
+        简介:
         <text>{{teacher.advantage}}</text>
       </view>
     </view>

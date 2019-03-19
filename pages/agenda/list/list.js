@@ -1,10 +1,5 @@
 // pages/agenda/list/list.js
 Page({
-  toDetail(id) {
-    wx.navigateTo({
-      url: '../detail/detail',
-    })
-  },
   /**
    * 页面的初始数据
    */

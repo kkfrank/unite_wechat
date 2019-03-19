@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/nav/nav",
     "pages/agenda/list/list",
-    "pages/index/index",
     "pages/register/register",
     "pages/user/argument/argument",
     "pages/place/list/list",
@@ -23,7 +23,8 @@
     "pages/user/user/user",
     "pages/unity/unity",
     "pages/user/gift/gift",
-    "pages/agenda/detail/detail"
+    "pages/agenda/detail/detail",
+    "pages/survey/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
