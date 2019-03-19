@@ -21,9 +21,14 @@
       <view>职位</view>
       <view>{{user.profession}}</view>
     </view>
-    
   </view>
   <view class="link-box">
+    <view class="user-item">
+      <view>我的优惠</view>
+      <view>ZBX33456</view>
+    </view>
+  </view>
+  <!-- <view class="link-box">
     <view class="user-item" bindtap='toMyGift'>
       <view>我的礼物</view>
       <view><text class="iconfont icon-more"></text></view>
@@ -34,5 +39,5 @@
       <view>我的评论</view>
       <view><text class="iconfont icon-more"></text></view>
     </view>
-  </view>
+  </view> -->
 </view>

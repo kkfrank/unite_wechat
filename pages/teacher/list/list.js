@@ -1,7 +1,6 @@
 // pages/teacher/list/list.js
 Page({
   toDetail(e) {
-    console.log(e)
     wx.navigateTo({
       url: '../detail/detail',
     })
