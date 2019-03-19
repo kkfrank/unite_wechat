@@ -1,5 +1,4 @@
-<!--pages/register/register.wxml-->
-<view class="box mt40">
+<view class="box">
   <view class="form-item">
     <view>
       <text class="must">*</text>
@@ -16,7 +15,7 @@
   </view>
   <view class="form-item">
     <view>
-      <text>行业</text>
+      <text class='ml30'>行业</text>
     </view>
     <picker bindchange="bindIndustriesChange" value="{{index}}" range="{{industries}}">
       <view class="picker" wx:if="{{user.industry}}">
@@ -26,8 +25,8 @@
     </picker>
   </view>
   <view class="form-item">
-  <view>
-      <text>职位</text>
+    <view>
+      <text class='ml30'>职位</text>
     </view>
     <picker bindchange="bindProfessionInput" value="{{index}}" range="{{industries}}">
       <view class="picker" wx:if="{{user.profession}}">
@@ -36,7 +35,7 @@
       <input wx:else type="text" placeholder="请输入职位" />
     </picker>
   </view>
-  <view class="form-submit">
+  <view class="form-submit mt30">
     <!-- <button open-type="getPhoneNumber" bindgetphonenumber="register">注册</button> -->
     <button bindtap="register">注册</button>
   </view>
