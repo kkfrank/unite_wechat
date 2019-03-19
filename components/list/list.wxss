@@ -33,16 +33,17 @@
 }
 .activity-list .content {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
-  width: 500rpx;
+  flex-direction: column;
+  width: 700rpx;
   padding: 0 10rpx;
 }
-.activity-list .content>view:last-child {
+.activity-list .content>view {
   line-height: 52rpx;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+  font-size: 28rpx;
 }

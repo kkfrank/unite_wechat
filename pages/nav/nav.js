@@ -21,8 +21,8 @@ Page({
     tips: '现在王老师正在讲课，是否前往?',
     navList:[
       {
-        name: '活动',
-        url: '../activity/list/list'
+        name: '日程',
+        url: '../agenda/list/list'
       },
       // {
       //   name: '赞助商',

@@ -1,0 +1,4 @@
+<!--pages/agenda/list/list.wxml-->
+<view class="agenda-box">
+  <list typeName="agenda" list="{{list}}" bind:toDetail="toDetail"/>
+</view>

@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/nav/nav",
+    "pages/agenda/list/list",
     "pages/index/index",
     "pages/register/register",
     "pages/user/argument/argument",
@@ -21,7 +22,8 @@
     "pages/place/detailSubs/detailSubs",
     "pages/user/user/user",
     "pages/unity/unity",
-    "pages/user/gift/gift"
+    "pages/user/gift/gift",
+    "pages/agenda/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,7 +32,8 @@
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
-    "list": "components/list/list"
+    "list": "components/list/list",
+    "detail": "components/detail/detail"
   },
   "networkTimeout": {
     "request": 20000,

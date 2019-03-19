@@ -1,17 +1,17 @@
-// pages/teacher/teacher.js
+// pages/agenda/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    teacher: {
+    agenda: {
       url: 'https://10.url.cn/eth/ajNVdqHZLLCIgUe7QmgPibps3nDVKYMUYKu8Q0yP7qjUMDhm1KXd0JEdO19soD9icicq7Umo5Ua7Cs/',
       name: '悟空',
+      course: 'C++',
       startTime: '2019-09-02 10:00',
       endTime: '2019-10-02 12:00',
       place: '上海交通大学',
-      course: 'C++',
       profession: '高级讲师',
       result: '一年店铺销售额两千万上亿企业运营总监',
       advantage: '搜索优化、直通ada',

@@ -57,8 +57,12 @@ Page({
         icon: 'none',
         duration: 2000
       })
-      return false
+      return false;
     }
+    wx.redirectTo({
+      url: '../nav/nav',
+    })
+    return false;
     util.showLoading();
     let openId = wx.getStorageSync('openId');
     let {

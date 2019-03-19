@@ -32,7 +32,7 @@
         时间: {{item.startTime}}~{{item.endTime}}
       </view>
       <view>
-        描述: {{item.description}}
+        课程: {{item.course}}
       </view>
     </view>
   </view>
@@ -60,4 +60,31 @@
     </view>
   </view>
 </view>
-
+<view class="list activity-list" wx:if="{{typeName==='agenda' }}">
+  <view class="item" wx:for="{{list}}" bindtap="toDetail" data-item="{{item}}">
+    <view class="left">
+      <view>
+        <image src="{{item.url}}" mode="aspectFit" style="width:200rpx;"></image>
+      </view>
+      <view>
+        {{item.name}}
+      </view>
+      <view>
+      </view>
+    </view>
+    <view class="content">
+      <view>
+        课程: {{item.course}}
+      </view>
+      <view>
+        地点: {{item.place}}
+      </view>
+      <view>
+        时间: {{item.startTime}}~{{item.endTime}}
+      </view>
+      <view>
+        介绍: {{item.description}}
+      </view>
+    </view>
+  </view>
+</view>

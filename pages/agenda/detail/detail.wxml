@@ -1,0 +1,4 @@
+<!--pages/agenda/detail/detail.wxml-->
+<view>
+  <detail typeName="agenda" detail="{{agenda}}" />
+</view>

@@ -1,4 +1,4 @@
 <!--pages/teacher/list/list.wxml-->
 <view class="teacher-box">
-  <list list="{{list}}" typeName="teacher"></list>
+  <list list="{{list}}" typeName="teacher" bind:toDetail="toDetail"></list>
 </view>
