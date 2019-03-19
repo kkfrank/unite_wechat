@@ -1,35 +1,37 @@
-/* pages/register/register.wxss */
-
 .box {
   padding: 0 20rpx;
+  margin-top: 100rpx;
+  /* width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0,-50%); */
+  box-sizing:border-box;
 }
 
 .box>.form-item {
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+  /* flex-wrap: wrap; */
   border-bottom: 1rpx solid #ddd;
   box-sizing: border-box;
+  padding:30rpx;
 }
 
-.box>.form-item input,  {
-  padding: 30rpx 0 20rpx;
-  width: 100%;
+.box>.form-item input {
+  flex-grow: 1;
 }
 
 .box>.form-item picker {
-  width: 100%;
 }
 
 .box>.form-item .picker {
-  width: 100%;
   height: 1.4rem;
 }
 
 .box>.form-item>view {
-  width: 100%;
-  margin-bottom: 15rpx;
+  margin-right:30rpx;
+  min-width: 60px;
 }
 
 .must {

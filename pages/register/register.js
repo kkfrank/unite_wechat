@@ -103,7 +103,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    industries: ['IT', '机械', '互联网'],
+    industries: ['IT', '机械', '互联网','其他'],
     user: {
       industry: null,
       email: null,
