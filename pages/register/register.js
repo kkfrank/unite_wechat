@@ -26,8 +26,9 @@ Page({
    * 监听用户输入职位
    */
   bindProfessionInput(e) {
+    let index = e.detail.value
     this.setData({
-      'user.profession': e.detail.value
+      'user.profession': this.data.professions[index]
     })
   },
   /***
@@ -103,7 +104,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    industries: ['IT', '机械', '互联网'],
+    industries: [
+      '游戏',
+      '院校教育/职业培训',
+      '硬件',
+      '平台/电商',
+      '视频',
+      '建筑',
+      '医疗',
+      '旅游',
+      '军事/航空航天',
+      '出版',
+      '政府',
+      '教育产品',
+      '广告/媒体/艺术',
+      '影视',
+      '其他'
+    ],
+    professions: [
+      'CEO/COO',
+      'CTO/技术总监/技术专家',
+      '技术经理',
+      '程序员',
+      '美术/策划',
+      '学生',
+      '市场/商务/销售',
+      '院校教师',
+      '广告/媒体/导演',
+      '其他'
+    ],
     user: {
       industry: null,
       email: null,
