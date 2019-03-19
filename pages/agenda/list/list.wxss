@@ -1,1 +1,9 @@
-/* pages/agenda/list/list.wxss */
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ddd;
+  padding: 20rpx;
+  font-size: 32rpx;
+  flex-direction:column;
+
+}

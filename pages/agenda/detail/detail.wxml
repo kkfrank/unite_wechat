@@ -2,3 +2,36 @@
 <view>
   <detail typeName="agenda" detail="{{agenda}}" />
 </view>
+
+
+<view class="detail-box">
+  <view class="item">
+    <view>
+      <text>主题</text>
+      <text>{{detail.title}}</text>
+    </view>
+    <view>
+      <text>时间</text>
+      <text>{{detail.startTime}}~{{detail.endTime}}</text>
+    </view>
+  </view>
+  <view class="item-description">
+    课程简介:
+    <text>{{detail.description}}</text>
+  </view>
+  <view class="detail-item">
+    <view class="item-image">
+      <image src='{{detail.url}}'></image>
+    </view>
+    <view>
+      <view class="item-title">
+        讲师姓名:
+        <text>{{detail.profession}}-{{detail.name}}</text>
+      </view>
+      <view class="item-title">
+        简介:
+        <text>{{detail.advantage}}</text>
+      </view>
+    </view>
+  </view>
+</view>

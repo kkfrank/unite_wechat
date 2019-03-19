@@ -1,4 +1,24 @@
 <!--pages/agenda/list/list.wxml-->
-<view class="agenda-box">
+<!-- <view class="agenda-box">
   <list typeName="agenda" list="{{list}}" bind:toDetail="toDetail"/>
+</view> -->
+
+
+<view class="list">
+ <view class="item" wx:for="{{courses}}" bindtap="toDetail" wx:key="*this" data-item="{{item}}">
+    <view class='mb20'>{{item.time}}</view>
+    <block wx:if="{{item.isCourse}}">
+      <view class='mb20'>
+        <text>主题: </text>
+        <text>{{item.title}}</text>
+      </view>
+      <view class='mb20'>
+        <text>演讲人: </text>
+        <text>{{item.teacher}}</text>
+      </view>
+    </block>
+    <view class='mb20'  wx:else>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
 </view>
