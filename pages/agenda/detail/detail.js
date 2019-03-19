@@ -1,4 +1,6 @@
 // pages/agenda/detail/detail.js
+import { courses } from '../../../mockdata/courses.js';
+import  teachers  from '../../../mockdata/teachers.js';
 Page({
 
   /**
