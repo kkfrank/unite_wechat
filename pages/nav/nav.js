@@ -24,14 +24,14 @@ Page({
         name: '活动',
         url: '../activity/list/list'
       },
-      {
-        name: '赞助商',
-        url: '../sponsors/list/list'
-      },
-      {
-        name: '场地',
-        url: '../place/list/list'
-      },
+      // {
+      //   name: '赞助商',
+      //   url: '../sponsors/list/list'
+      // },
+      // {
+      //   name: '场地',
+      //   url: '../place/list/list'
+      // },
       {
         name: '讲师',
         url: '../teacher/list/list'
