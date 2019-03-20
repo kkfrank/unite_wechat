@@ -1,4 +1,5 @@
 import { courses } from '../mockdata/courses.js'
+import { teachers } from '../mockdata/teachers.js'
 /***
  * 获取讲师详情时，根据id来获取课程
  */
@@ -10,6 +11,18 @@ const getCourseByTeacherId = (id) => {
     }
   })
   return list
+}
+/***
+ * 获取讲师详情时，根据id来获取讲师信息
+ */
+const getTeacherById = (id) => {
+  let obj = {}
+  teachers.map((teacher) => {
+    if (id === teacher.id) {
+      obj = JSON.parse(JSON.stringify(teacher))
+    }
+  })
+  return obj
 }
 const formatTime = date => {
   const year = date.getFullYear()
@@ -54,5 +67,6 @@ export {
   showLoading,
   hideLoading,
   getCourseByTeacherId,
+  getTeacherById,
   showToast
 }
