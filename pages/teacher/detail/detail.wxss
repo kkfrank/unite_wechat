@@ -20,8 +20,8 @@
 .item-content {
   margin-top: 20rpx;
   text-align: left;
-  line-height: 50rpx;
-  font-size: 28rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
   text-indent: 60rpx;
 }
 .item-title {
@@ -32,5 +32,5 @@
   white-space: nowrap;
 }
 .item-description {
-  line-height: 80rpx;
+  line-height: 70rpx;
 }
