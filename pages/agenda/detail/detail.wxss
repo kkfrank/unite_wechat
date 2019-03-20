@@ -4,6 +4,7 @@
   /* justify-content: space-around; */
    border-bottom: 1rpx solid #ddd;
    padding:20rpx;
+   font-size:32rpx;
 }
 .item text:first-child{
   display:flex;
