@@ -1,0 +1,6 @@
+var computerTime = function (start, end) {
+  return start +'-'+ end.split(' ')[1]
+}
+module.exports={
+  computerTime: computerTime
+}

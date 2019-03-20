@@ -1,37 +1,24 @@
-<!--pages/agenda/detail/detail.wxml-->
-<view>
-  <detail typeName="agenda" detail="{{agenda}}" />
-</view>
-
+<wxs module="helper" src="../../../utils/helper.wxs"></wxs>
 
 <view class="detail-box">
   <view class="item">
-    <view>
-      <text>主题</text>
-      <text>{{detail.title}}</text>
-    </view>
-    <view>
-      <text>时间</text>
-      <text>{{detail.startTime}}~{{detail.endTime}}</text>
-    </view>
+    <text>主题</text>
+    <text>{{course.title}}</text>
   </view>
-  <view class="item-description">
-    课程简介:
-    <text>{{detail.description}}</text>
+
+  <view class="item">
+    <text>时间</text>
+    <text>{{helper.computerTime(course.startTime,course.endTime)}}</text>
   </view>
-  <view class="detail-item">
-    <view class="item-image">
-      <image src='{{detail.url}}'></image>
-    </view>
-    <view>
-      <view class="item-title">
-        讲师姓名:
-        <text>{{detail.profession}}-{{detail.name}}</text>
-      </view>
-      <view class="item-title">
-        简介:
-        <text>{{detail.advantage}}</text>
-      </view>
-    </view>
+
+  <view class="item">
+     <text>简介</text>
+    <text>{{course.desc}}</text>
   </view>
+
+  <navigator url="{{'/pages/teacher/detail/detail?id='+teacher.id}}" class='item'>
+    <text>讲师</text>
+    <text>{{teacher.name}}</text>
+    <!-- <image src='{{teacher.url}}'></image> -->
+  </navigator>
 </view>

@@ -26,13 +26,13 @@
     </view>
     <view class="content">
       <view>
+        课程: {{item.course}}
+      </view>
+      <view>
         地点: {{item.place}}
       </view>
       <view>
         时间: {{item.startTime}}~{{item.endTime}}
-      </view>
-      <view>
-        课程: {{item.course}}
       </view>
     </view>
   </view>
@@ -40,22 +40,22 @@
 
 <view class="list activity-list" wx:if="{{typeName==='lesson' }}">
   <view class="item" wx:for="{{list}}" bindtap="toDetail" data-item="{{item}}">
-    <view class="left">
+    <!-- <view class="left">
       <view>
         <image src="{{item.url}}" mode="aspectFit" style="width:200rpx;"></image>
       </view>
       <view>
       </view>
-    </view>
+    </view> -->
     <view class="content">
       <view>
-        地点: {{item.place}}
-      </view>
-      <view>
-        时间: {{item.time}}
-      </view>
-      <view>
         课程: {{item.title}}
+      </view>
+      <view>
+        时间: {{item.startTime}}-{{item.endTime}}
+      </view>
+      <view>
+        地点: {{item.place?item.place:'-'}}
       </view>
     </view>
   </view>

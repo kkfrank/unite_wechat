@@ -5,5 +5,10 @@
   padding: 20rpx;
   font-size: 32rpx;
   flex-direction:column;
-
+  position: relative;
+}
+.detail-icon{
+  position: absolute;
+  right: 20rpx;
+  top:80rpx;
 }

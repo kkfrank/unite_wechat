@@ -2,21 +2,14 @@
 <view class="teacher-box">
   <view class="teacher-item">
     <view class="item-image">
-      <image src='{{teacher.url}}'></image>
-    </view>
-    <view>
-      <view class="item-title">
-        姓名:
+      <image src='{{teacher.url}}' mode="aspectFit"></image>
+      <view>
         <text>{{teacher.name}}</text>
       </view>
-      <view class="item-title">
-        简介:
-        <text>{{teacher.position}}</text>
-      </view>
     </view>
-  </view>
-  <view class="teacher-item">
-    <text>{{teacher.description}}</text>
+    <view class="item-content">
+      <text>{{teacher.position}},{{teacher.description}}</text>
+    </view>
   </view>
   <list list="{{list}}" typeName="lesson"></list>
 </view>
