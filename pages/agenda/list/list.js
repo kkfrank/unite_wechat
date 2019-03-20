@@ -1,8 +1,7 @@
-// pages/agenda/list/list.js
 import { courses } from '../../../mockdata/courses.js';
-import {teachers} from '../../../mockdata/teachers.js';
+import { teachers } from '../../../mockdata/teachers.js';
+import * as util from '../../../utils/util.js'
 
-console.log(teachers)
 Page({
   /**
    * 页面的初始数据
@@ -33,7 +32,7 @@ Page({
       if(item.teacherId){
         return{
           ...item,
-          teacher: (teachers.filter(t => t.id == item.teacherId))[0]
+          teacher: util.getItemByKey(teachers, 'id', item.teacherId)
         }
       }else{
         return item
