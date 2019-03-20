@@ -1,16 +1,6 @@
-<wxs module="helper" src="../../../utils/helper.wxs"></wxs>
-
-<view class="list">
- <navigator url="{{'/pages/survey/detail/detail?id='+item.id}}" class='item' wx:for="{{courses}}"  wx:key="id">
-    <view class='mb20'>{{helper.computerTime(item.startTime,item.endTime)}}</view>
-    <view class='mb20'>
-      <text>主题: </text>
-      <text>{{item.title}}</text>
-    </view>
-    <view class='mb20'>
-      <text>演讲人: </text>
-      <text>{{item.teacher.name}}</text>
-    </view>
-    <text class='detail-icon'> > </text>
-  </navigator>
+<view class="box">
+  <questionnaire bind:answerQuestion="answerQuestion" list="{{surveyZero}}" />
+  <questionnaire wx:if="typeName==='下午场技术讲座'" bind:answerQuestion="answerQuestion" list="{{surveyA}}" />
+  <questionnaire wx:if="typeName==='Workshop'" bind:answerQuestion="answerQuestion" list="{{surveyA}}" />
+  <questionnaire wx:if="typeName==='我没有参与下午的活动'" bind:answerQuestion="answerQuestion" list="{{surveyA}}" />
 </view>

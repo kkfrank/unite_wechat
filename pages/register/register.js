@@ -4,6 +4,19 @@ import {
 } from '../../api/main.js';
 import * as util from '../../utils/util.js'
 Page({
+  toService() {
+    wx.navigateTo({
+      url: '/pages/browser/browser',
+    })
+    return false
+  },
+  // 监听用户是否勾选
+  changeChecked(e) {
+    let isChecked = !this.data.isChecked
+    this.setData({
+      'isChecked': isChecked
+    })
+  },
   /***
    * 监听用户选择行业
    */
@@ -13,6 +26,14 @@ Page({
       'user.industry': this.data.industries[index]
     })
     console.log(e)
+  },
+  /***
+   * 监听用户输入姓名
+   */
+  bindNameInput(e) {
+    this.setData({
+      'user.name': e.detail.value
+    })
   },
   /***
    * 监听用户输入邮箱
@@ -43,6 +64,14 @@ Page({
    * 点击这册按钮进行注册
    */
   register(e) {
+    if (!this.data.user.name) {
+      wx.showToast({
+        title: '请输入姓名',
+        icon: 'none',
+        duration: 2000
+      })
+      return false;
+    }
     let reg = /^(.+)@(.+){1,}\.(.+)$/
     if (!reg.test(this.data.user.email)) {
       wx.showToast({
@@ -55,6 +84,30 @@ Page({
     if (!this.data.user.company) {
       wx.showToast({
         title: '请填入公司',
+        icon: 'none',
+        duration: 2000
+      })
+      return false;
+    }
+    if (!this.data.user.industry) {
+      wx.showToast({
+        title: '请选择行业',
+        icon: 'none',
+        duration: 2000
+      })
+      return false;
+    }
+    if (!this.data.user.profession) {
+      wx.showToast({
+        title: '请选择职位',
+        icon: 'none',
+        duration: 2000
+      })
+      return false;
+    }
+    if (!this.data.isChecked) {
+      wx.showToast({
+        title: '请勾选服务条款',
         icon: 'none',
         duration: 2000
       })
@@ -104,6 +157,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isChecked: false, //默认没有选中服务条款
     industries: [
       '游戏',
       '院校教育/职业培训',
@@ -134,6 +188,7 @@ Page({
       '其他'
     ],
     user: {
+      name: null,
       industry: null,
       email: null,
       profession: null,

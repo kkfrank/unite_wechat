@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/survey/list/list",
     "pages/nav/nav",
-    "pages/agenda/list/list",
     "pages/register/register",
+    "pages/index/index",
+    "pages/agenda/list/list",
     "pages/user/argument/argument",
     "pages/place/list/list",
     "pages/activity/argument/argument",
@@ -24,8 +25,8 @@
     "pages/unity/unity",
     "pages/user/gift/gift",
     "pages/agenda/detail/detail",
-    "pages/survey/list/list",
-    "pages/survey/detail/detail"
+    "pages/survey/detail/detail",
+    "pages/browser/browser"
   ],
   "window": {
     "backgroundTextStyle": "light",

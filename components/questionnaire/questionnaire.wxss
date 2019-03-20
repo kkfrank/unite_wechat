@@ -1,0 +1,12 @@
+/* components/questionnaire/questionnaire.wxss */
+.item {
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #ddd;
+  font-size: 32rpx;
+}
+.question,.answer {
+  width: 100%;
+  display: block;
+  line-height: 80rpx;
+  word-break: break-all;
+}

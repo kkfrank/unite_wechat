@@ -1,0 +1,2 @@
+<!--pages/browser/browser.wxml-->
+<web-view src='https://unity3d.com/legal/terms-of-service'></web-view>

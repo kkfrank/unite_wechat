@@ -6,7 +6,7 @@
   left: 0;
   top: 50%;
   transform: translate(0,-50%); */
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .box>.form-item {
@@ -15,14 +15,54 @@
   /* flex-wrap: wrap; */
   border-bottom: 1rpx solid #ddd;
   box-sizing: border-box;
-  padding:30rpx;
+  padding: 30rpx;
 }
 
 .box>.form-item input {
   flex-grow: 1;
 }
 
-.box>.form-item picker {
+.check-item {
+  margin-top: 20rpx;
+}
+
+checkbox {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+.checkbox {
+  display: flex;
+  align-items: baseline;
+}
+checkbox .wx-checkbox-input {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #3296fa;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.check-item label>view {
+  font-size: 24rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  display: inline-block;
+  border-bottom: 1rpx solid #999;
+  margin-bottom: 4rpx;
 }
 
 .box>.form-item .picker {
@@ -30,7 +70,7 @@
 }
 
 .box>.form-item>view {
-  margin-right:30rpx;
+  margin-right: 30rpx;
   min-width: 60px;
 }
 

@@ -2,6 +2,13 @@
   <view class="form-item">
     <view>
       <text class="must">*</text>
+      <text>姓名</text>
+    </view>
+    <input focus="true" type="text" placeholder="请输入姓名" bindinput="bindNameInput" value="{{user.name}}" />
+  </view>
+  <view class="form-item">
+    <view>
+      <text class="must">*</text>
       <text>邮箱</text>
     </view>
     <input focus="true" type="text" placeholder="请输入邮箱" bindinput="bindEmailInput" value="{{user.email}}" />
@@ -15,7 +22,8 @@
   </view>
   <view class="form-item">
     <view>
-      <text class='ml30'>行业</text>
+      <text class="must">*</text>
+      <text>行业</text>
     </view>
     <picker bindchange="bindIndustriesChange" value="{{index}}" range="{{industries}}">
       <view class="picker" wx:if="{{user.industry}}">
@@ -26,14 +34,23 @@
   </view>
   <view class="form-item">
     <view>
-      <text class='ml30'>职位</text>
+      <text class="must">*</text>
+      <text>职位</text>
     </view>
     <picker bindchange="bindProfessionInput" value="{{index}}" range="{{industries}}">
       <view class="picker" wx:if="{{user.profession}}">
         {{user.profession}}
       </view>
-      <input wx:else type="text" placeholder="请输入职位" />
+      <input wx:else type="text" placeholder="请选择职位" />
     </picker>
+  </view>
+  <view class="check-item">
+    <checkbox-group bindchange="changeChecked">
+      <label class="checkbox">
+        <checkbox  checked="{{isChecked}}" />
+        <view bindtap="toService">我已阅读同意该服务条款</view>
+      </label>
+    </checkbox-group>
   </view>
   <view class="form-submit mt30">
     <!-- <button open-type="getPhoneNumber" bindgetphonenumber="register">注册</button> -->
