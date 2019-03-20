@@ -1,8 +1,8 @@
 // pages/agenda/list/list.js
 import { courses } from '../../../mockdata/courses.js';
-import teachers from '../../../mockdata/teachers.js';
+import {teachers} from '../../../mockdata/teachers.js';
 
-console.log(courses)
+console.log(teachers)
 Page({
   /**
    * 页面的初始数据
