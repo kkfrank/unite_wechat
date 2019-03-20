@@ -5,10 +5,6 @@ import {
 Page({
   toDetail(e) {
     let teacher = e.detail.item
-    wx.setStorage({
-      key: 'teacher',
-      data: teacher
-    })
     wx.navigateTo({
       url: `../detail/detail?id=${teacher.id}`,
     })

@@ -1,5 +1,5 @@
 // pages/teacher/teacher.js
-import { getCourseByTeacherId } from '../../../utils/util.js'
+import { getCourseByTeacherId, getTeacherById } from '../../../utils/util.js'
 
 Page({
 
@@ -19,17 +19,11 @@ Page({
       title: 'loading',
     })
     let courses = getCourseByTeacherId(options.id)
-    console.log(courses)
+    let teacher = getTeacherById(options.id)
+    wx.hideLoading()
     this.setData({ 'list': courses })
-    let that = this
-    wx.getStorage({
-      key: 'teacher',
-      success: function(res) {
-        console.log(res)
-        wx.hideLoading()
-        that.setData({ 'teacher': res.data })
-      },
-    })
+    this.setData({ 'teacher': teacher })
+    
   },
 
   /**
