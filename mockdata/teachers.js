@@ -5,7 +5,7 @@ const teachers = [
     url: '/images/zlm.png',
     name: '张黎明',
     position: 'Unity大中华区技术总监',
-    description: '现任Unity大中华区技术总监。进入游戏行业超过十年时间，期间参与过游戏引擎研发、Autodesk公司产品的通用图形引擎研发，以及基于商业游戏引擎的项目开发。因热爱游戏而进入游戏行业，经历多年引擎研发，深知一款卓越的游戏引擎对开发者的价值，也致力于让更多的开发者可以用Unity更快的实现自己的愿景。'
+    description: '进入游戏行业超过十年时间，期间参与过游戏引擎研发、Autodesk公司产品的通用图形引擎研发，以及基于商业游戏引擎的项目开发。因热爱游戏而进入游戏行业，经历多年引擎研发，深知一款卓越的游戏引擎对开发者的价值，也致力于让更多的开发者可以用Unity更快的实现自己的愿景。'
   },
   {
     id: 'cl',
@@ -36,4 +36,4 @@ const teachers = [
     description: '曾在多个国内一线游戏研发大厂就职，领导并且参与多款大型MMO的研发，拥有多年的游戏研发经验。精通Unity开发，致力于帮助广大开发者解决Unity项目开发及技术难题。'
   }
 ]
-export default teachers
+export {teachers}

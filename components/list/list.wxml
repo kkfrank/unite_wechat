@@ -10,7 +10,7 @@
       </view>
     </view>
     <view class="content">
-      {{item.description}}
+      现任{{item.position}},{{item.description}}
     </view>
   </view>
 </view>
@@ -52,10 +52,10 @@
         地点: {{item.place}}
       </view>
       <view>
-        时间: {{item.startTime}}~{{item.endTime}}
+        时间: {{item.time}}
       </view>
       <view>
-        课程: {{item.course}}
+        课程: {{item.title}}
       </view>
     </view>
   </view>

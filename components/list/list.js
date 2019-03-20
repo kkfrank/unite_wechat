@@ -37,19 +37,7 @@ Component({
      * 点击列表去详情页面
      */
     toDetail(e) {
-      if (this.properties.typeName === 'teacher') {
-        wx.navigateTo({
-          url: '/pages/teacher/detail/detail',
-        })
-      }else if (this.properties.typeName === 'argument') {
-        wx.navigateTo({
-          url: '/pages/activity/argument/argument',
-        })
-      }else{
-        wx.navigateTo({
-          url: '/pages/agenda/detail/detail',
-        })
-      }
+      this.triggerEvent('toDetail', e.currentTarget.dataset)
     }
   }
 })
