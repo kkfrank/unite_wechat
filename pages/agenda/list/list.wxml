@@ -1,12 +1,8 @@
-<!--pages/agenda/list/list.wxml-->
-<!-- <view class="agenda-box">
-  <list typeName="agenda" list="{{list}}" bind:toDetail="toDetail"/>
-</view> -->
-
+<wxs module="helper" src="../../../utils/helper.wxs"></wxs>
 
 <view class="list">
  <view class="item" wx:for="{{courses}}" bindtap="toDetail" wx:key="*this" data-item="{{item}}">
-    <view class='mb20'>{{item.time}}</view>
+    <view class='mb20'>{{helper.computerTime(item.startTime,item.endTime)}}</view>
     <block wx:if="{{item.isCourse}}">
       <view class='mb20'>
         <text>主题: </text>
@@ -14,8 +10,9 @@
       </view>
       <view class='mb20'>
         <text>演讲人: </text>
-        <text>{{item.teacher}}</text>
+        <text>{{item.teacher.name}}</text>
       </view>
+      <text class='detail-icon'>></text>
     </block>
     <view class='mb20'  wx:else>
       <text>{{item.title}}</text>

@@ -1,1 +1,21 @@
-/* pages/agenda/detail/detail.wxss */
+.item {
+  display: flex;
+  line-height: 60rpx;
+  /* justify-content: space-around; */
+   border-bottom: 1rpx solid #ddd;
+   padding:20rpx;
+}
+.item text:first-child{
+  display:flex;
+  align-items:center;
+  min-width: 80rpx;
+  margin-right:20rpx;
+}
+.item text:last-child{
+  flex-flow: 1; 
+}
+
+.item image{
+  width: 60rpx;
+  height: 60rpx;
+}

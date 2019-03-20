@@ -25,6 +25,10 @@ Page({
         url: '../agenda/list/list'
       },
       // {
+      //   name: '活动',
+      //   url: '../activity/list/list'
+      // },
+      // {
       //   name: '赞助商',
       //   url: '../sponsors/list/list'
       // },

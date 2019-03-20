@@ -45,6 +45,10 @@ Component({
         wx.navigateTo({
           url: '/pages/activity/argument/argument',
         })
+      } else if (this.properties.typeName ==='activity'){
+        wx.navigateTo({
+          url: '/pages/activity/detail/detail',
+        })
       }else{
         wx.navigateTo({
           url: '/pages/agenda/detail/detail',
