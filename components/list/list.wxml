@@ -57,6 +57,9 @@
       <view>
         地点: {{item.place?item.place:'-'}}
       </view>
+      <view>
+        描述: {{item.desc}}
+      </view>
     </view>
   </view>
 </view>
