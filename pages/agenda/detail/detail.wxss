@@ -10,7 +10,7 @@
   display:flex;
   align-items:center;
   min-width: 80rpx;
-  margin-right:20rpx;
+  margin-right:28rpx;
 }
 .item text:last-child{
   flex-flow: 1; 
