@@ -18,7 +18,8 @@
 
   <navigator url="{{'/pages/teacher/detail/detail?id='+teacher.id}}" class='item'>
     <text>讲师</text>
-    <text>{{teacher.name}}</text>
+    <text class='w100'>{{teacher.name}}</text>
+    <text class='detail-icon'>></text>
     <!-- <image src='{{teacher.url}}'></image> -->
   </navigator>
 </view>
