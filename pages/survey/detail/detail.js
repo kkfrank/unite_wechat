@@ -1,29 +1,18 @@
-import { courses } from '../../../mockdata/courses.js';
-import { teachers }  from '../../../mockdata/teachers.js';
-import * as util from '../../../utils/util.js'
-
+// pages/survey/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    course:{},
-    teacher:{}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let { id, teacherId } = options
-    var course = util.getItemByKey(courses, 'id', id)
-    var teacher = util.getItemByKey(teachers, 'id', teacherId)
-
-    this.setData({
-      course: course,
-      teacher: teacher
-    })
+    console.log(options)
   },
 
   /**
@@ -53,4 +42,25 @@ Page({
   onUnload: function () {
 
   },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
 })

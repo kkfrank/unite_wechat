@@ -24,7 +24,8 @@
     "pages/unity/unity",
     "pages/user/gift/gift",
     "pages/agenda/detail/detail",
-    "pages/survey/list/list"
+    "pages/survey/list/list",
+    "pages/survey/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -24,6 +24,18 @@ const getTeacherById = (id) => {
   })
   return obj
 }
+/***
+ * arr:[
+ *        {key1: value1}
+ *        {key2: value2}
+ *      ]
+ */
+const getItemByKey = (arr, key, val) =>{
+  if (!arr || arr.length ===0 || !key ){
+    return {};
+  }
+  return arr.filter(item=>item[key]==val)[0] || {}
+}
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -68,5 +80,6 @@ export {
   hideLoading,
   getCourseByTeacherId,
   getTeacherById,
+  getItemByKey,
   showToast
 }
