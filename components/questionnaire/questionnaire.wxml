@@ -2,16 +2,16 @@
 <view class="list">
   <view class="item" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
     <view class="question">{{index + startIndex}}、{{item.question}}</view>
-    <radio-group wx:if="{{!item.isMultiply}}" class="answers" bindchange="changeAnswer" data-item="{{item}}" >
+    <radio-group wx:if="{{!item.isMultiply}}" class="answers" bindchange="changeAnswer" data-item="{{item}}" data-index="{{index}}" >
       <label wx:for="{{item.answers}}" wx:for-index="answerIndex" wx:for-item="answer" class="answer">
-        <radio value="{{answer}}" checked="{{answer.checked}}" /> 
+        <radio value="{{answer}}"  /> 
         {{optionsMap[answerIndex]}}、{{answer}}
       </label>
     </radio-group>
-    <checkbox-group wx:else class="answers" bindchange="changeAnswer" data-item="{{item}}">
-      <label wx:for="{{item.answers}}" wx:for-index="answerIndex" wx:for-item="answer" class="answer">
-        <checkbox value="{{answerIndex}}" checked="{{answer.checked}}" /> 
-        {{optionsMap[answerIndex]}}{{answer}}
+    <checkbox-group wx:else class="answers" bindchange="changeAnswer" data-item="{{item}}" data-index="{{index}}">
+      <label wx:for="{{item.answers}}" wx:for-index="answerIndex" wx:for-item="answer" class="answer" >
+        <checkbox value="{{answer}}"  /> 
+        {{optionsMap[answerIndex]}}、{{answer}}
       </label>
     </checkbox-group>
   </view>

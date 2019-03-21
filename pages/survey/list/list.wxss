@@ -12,3 +12,7 @@
   right: 20rpx;
   top:80rpx;
 }
+.submit-box {
+  padding: 0 20rpx;
+  margin: 40rpx;
+}

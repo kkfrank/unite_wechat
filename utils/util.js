@@ -1,5 +1,23 @@
 import { courses } from '../mockdata/courses.js'
 import { teachers } from '../mockdata/teachers.js'
+// 调查问卷中，调查题需要改变多选题的数据结构,如{value:x,isChecked: false}
+const transMultiplyChoice = (list) => {
+  let newList = JSON.parse(JSON.stringify(list))
+  newList.map((ele,eleIndex)=>{
+    if (ele.isMultiply) {
+      let newAnswers = []
+      ele.answers.map((answer,index)=>{
+        let obj = {
+          value: answer,
+          isChecked: false
+        }
+        newAnswers.push(obj)
+      })
+      ele.answers = newAnswers
+    }
+  })
+  return newList
+}
 /***
  * 获取讲师详情时，根据id来获取课程
  */
@@ -81,5 +99,6 @@ export {
   getCourseByTeacherId,
   getTeacherById,
   getItemByKey,
+  transMultiplyChoice,
   showToast
 }

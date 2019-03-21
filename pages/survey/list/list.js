@@ -1,18 +1,74 @@
-import { surveyZero } from '../../../mockdata/survey/surveyZero.js'
-import { surveyA } from '../../../mockdata/survey/surveyA.js'
-import { surveyB } from '../../../mockdata/survey/surveyB.js'
-import { surveyC } from '../../../mockdata/survey/surveyC.js'
+import {
+  surveyZero
+} from '../../../mockdata/survey/surveyZero.js'
+import {
+  surveyA
+} from '../../../mockdata/survey/surveyA.js'
+import {
+  surveyB
+} from '../../../mockdata/survey/surveyB.js'
+import {
+  surveyC
+} from '../../../mockdata/survey/surveyC.js'
 Page({
+  /**
+   * 用户点击提交调查问卷
+   */
+  submit() {
+    let typeMap = new Map([
+      ['下午场技术讲座', 'surveyA'],
+      ['Workshop', 'surveyB'],
+      ['我没有参与下午的活动', 'surveyC']
+    ])
+    let list = [...this.data.surveyZero, ...this.data[typeMap.get(this.data.typeName)]]
+    let noAnswerIndex = 0
+    list.map((ele,index)=>{
+      if(!ele.chooseAnswer) {
+        noAnswerIndex = index + 1
+      }
+    })
+    if(noAnswerIndex) {
+      wx.showToast({
+        icon: 'none',
+        title: `第${noAnswerIndex}题没有选择`,
+      })
+      return false
+    } 
+    wx.showModal({
+      title: '提示',
+      content: '问卷至此结束，凭问卷赠予优惠码购买Unite Shanghai 2019 门票获100元优惠！优惠码仅限使用一次，请妥善使用和保管。感谢您对Unity的支持！',
+      success(res) {
+        if (res.confirm) {
+          wx.redirectTo({
+            url: '/pages/user/user/user',
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
   /***
    * 当用户选择不同的调查问卷时
    */
   answerQuestion(e) {
-    console.log(e)
+    let item = e.detail
+    // 判断该题是否为改变调查问卷的那道题
+    if (item.isChangeSurvey) {
+      this.setData({
+        'typeName': item.chooseAnswer
+      })
+    }
+    // 设置用户选择试卷答案
+    this.setData({
+      [`survey${item.type}[${item.index}].chooseAnswer`]: item.chooseAnswer
+    })
   },
   /**
    * 页面的初始数据
    */
   data: {
+    typeName: null,
     surveyZero: surveyZero,
     surveyA: surveyA,
     surveyB: surveyB,
@@ -22,35 +78,35 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   }
 })

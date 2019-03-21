@@ -1,4 +1,7 @@
 /* components/questionnaire/questionnaire.wxss */
+.list {
+  overflow: hidden;
+}
 .item {
   padding: 20rpx 40rpx;
   border-bottom: 1rpx solid #ddd;
