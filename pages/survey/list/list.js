@@ -10,6 +10,9 @@ import {
 import {
   surveyC
 } from '../../../mockdata/survey/surveyC.js'
+import {
+  addSurvey
+} from '../../../api/survey.js'
 Page({
   /**
    * 用户点击提交调查问卷
@@ -20,29 +23,49 @@ Page({
       ['Workshop', 'surveyB'],
       ['我没有参与下午的活动', 'surveyC']
     ])
+    let typeNameMap = new Map([
+      ['下午场技术讲座', 'A'],
+      ['Workshop', 'B'],
+      ['我没有参与下午的活动', 'C']
+    ])
     let list = [...this.data.surveyZero, ...this.data[typeMap.get(this.data.typeName)]]
     let noAnswerIndex = 0
-    list.map((ele,index)=>{
-      if(!ele.chooseAnswer) {
+    let submitForm = {
+      'userId': '1',
+      'type': typeNameMap.get(this.data.typeName),
+      'questions': []
+    }
+    list.map((ele, index) => {
+      if (!ele.chooseAnswer) {
         noAnswerIndex = index + 1
       }
+      submitForm.questions.push({
+        'id': ele.id,
+        'answer': ele.chooseAnswer instanceof Array ? ele.chooseAnswer.join('#') : ele.chooseAnswer,
+        'isMultiple': ele.isMultiple
+      })
     })
-    if(noAnswerIndex) {
+    if (noAnswerIndex) {
       wx.showToast({
         icon: 'none',
         title: `第${noAnswerIndex}题没有选择`,
       })
       return false
-    } 
+    }
+
+    let that = this
     wx.showModal({
       title: '提示',
       content: '问卷至此结束，凭问卷赠予优惠码购买Unite Shanghai 2019 门票获100元优惠！优惠码仅限使用一次，请妥善使用和保管。感谢您对Unity的支持！',
       success(res) {
         if (res.confirm) {
-          wx.redirectTo({
-            url: '/pages/user/user/user',
+          addSurvey(submitForm).then(res => {
+            console.log(res)
+            that.setData({
+              type: 2
+            })
           })
-        } else if (res.cancel) {
+        } else {
           console.log('用户点击取消')
         }
       }
@@ -68,6 +91,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    type: 1,
     typeName: null,
     surveyZero: surveyZero,
     surveyA: surveyA,

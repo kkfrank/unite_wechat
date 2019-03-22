@@ -1,21 +1,21 @@
 var courses = [
   {
-    id: "1",
+    id: "1", 
     startTime: "2019-03-29 9:30",
     endTime:"2019-03-29 10:00",
     title: '签到，unity宣传影片赏析',
     isCourse: false
   },
   {
-    id: "2",
-    teacherId:'lwx',
-    startTime: "2019-03-29 10:00",
-    endTime: "2019-03-29 11:00",
-    title: 'Unity引擎源码解析-ShaderLab原理及优化',
-    teacher: '刘伟贤',
-    isCourse: true,
+    id: "2", // 课程id
+    teacherId:'lwx', // 讲师的id
+    startTime: "2019-03-29 10:00", // 讲课开始时间
+    endTime: "2019-03-29 11:00",// 讲课结束时间
+    title: 'Unity引擎源码解析-ShaderLab原理及优化', // 主题
+    teacher: '刘伟贤', // 讲师名称
+    isCourse: true, // 是否是课程还是休息时间
     desc: "ShaderLab是一套跨平台，高易用性的开发语言，管理着运行时Shader的加载和使用。开发者使用ShaderLab可以高效的开发出适用于不同平台，不同设备的Shader。在游戏开发中，对于ShaderLab资源的管理和优化是非常重要的一环。Unity技术支持工程师刘伟贤将结合Unity引擎源代码，深入讲解ShaderLab背后的设计思想和实现原理，分析ShaderLab资源的管理策略，同时对游戏开发过程中如何高效使用ShaderLab资源给出建议。"
-    },
+    }, // 课程描述
   {
     id: "3",
     teacherId: 'ly',

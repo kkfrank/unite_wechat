@@ -1,0 +1,10 @@
+<!--components/wait/wait.wxml-->
+<view class="box">
+  <view class="logo-box">
+    <image src='../../../images/unity.jpg'></image>
+  </view>
+  <view>讲课完毕后在来填写调查问卷</view>
+  <!-- <view>上午场开始时间：2019-03-26 10:00</view> -->
+  <!-- <view>Workshop场开始时间：2019-03-26 14:00</view> -->
+  <!-- <view>下午场开始时间：2019-03-26 16:00</view> -->
+</view>

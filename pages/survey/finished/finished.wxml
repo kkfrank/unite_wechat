@@ -1,0 +1,9 @@
+<view class="box">
+  <view class="logo-box">
+    <image src='../../../images/unity.jpg'></image>
+  </view>
+  <view class="title">你已经完成调查问卷</view>
+  <view class="content">
+    你的优惠码是:<text class="code">{{couponCode}}</text>
+  </view>
+</view>

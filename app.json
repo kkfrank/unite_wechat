@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/survey/list/list",
     "pages/nav/nav",
+    "pages/survey/list/list",
     "pages/register/register",
     "pages/agenda/list/list",
     "pages/user/argument/argument",
@@ -26,7 +26,9 @@
     "pages/user/gift/gift",
     "pages/agenda/detail/detail",
     "pages/survey/detail/detail",
-    "pages/browser/browser"
+    "pages/browser/browser",
+    "pages/survey/finished/finished",
+    "pages/survey/wait/wait"
   ],
   "window": {
     "backgroundTextStyle": "light",

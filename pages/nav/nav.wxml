@@ -1,6 +1,6 @@
 <!--pages/nav/nav.wxml-->
 <view class="nav">
-  <view class="nav-item" wx:for="{{navList}}" bindtap="switchNav" data-url="{{item.url}}">
+  <view class="nav-item" wx:for="{{navList}}" bindtap="switchNav"data-survey="{{item.isSurvey}}" data-url="{{item.url}}">
     {{item.name}}
   </view>
   <view class="tips hide" bindtap="toDetail">

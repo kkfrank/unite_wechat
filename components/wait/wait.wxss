@@ -1,0 +1,24 @@
+/* components/wait/wait.wxss */
+.box {
+  text-align: center;
+  font-size: 36rpx;
+  color: #666;
+  line-height: 80rpx;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+  margin-bottom: 50rpx; 
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-box image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  animation: showImage 4s;
+  transform: rotate(0deg);
+}

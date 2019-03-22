@@ -2,7 +2,7 @@
 <view class="list">
   <view class="item" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}">
     <view class="question">{{index + startIndex}}、{{item.question}}</view>
-    <radio-group wx:if="{{!item.isMultiply}}" class="answers" bindchange="changeAnswer" data-item="{{item}}" data-index="{{index}}" >
+    <radio-group wx:if="{{!item.isMultiple}}" class="answers" bindchange="changeAnswer" data-item="{{item}}" data-index="{{index}}" >
       <label wx:for="{{item.answers}}" wx:for-index="answerIndex" wx:for-item="answer" class="answer">
         <radio value="{{answer}}"  /> 
         {{optionsMap[answerIndex]}}、{{answer}}

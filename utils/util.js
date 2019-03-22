@@ -4,7 +4,7 @@ import { teachers } from '../mockdata/teachers.js'
 const transMultiplyChoice = (list) => {
   let newList = JSON.parse(JSON.stringify(list))
   newList.map((ele,eleIndex)=>{
-    if (ele.isMultiply) {
+    if (ele.isMultiple) {
       let newAnswers = []
       ele.answers.map((answer,index)=>{
         let obj = {

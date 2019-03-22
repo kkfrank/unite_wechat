@@ -1,0 +1,33 @@
+/* components/finished/finished.wxss */
+
+.box {
+  text-align: center;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 160rpx;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-box image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  animation: showImage 4s;
+  transform: rotate(0deg);
+}
+
+.title {
+  font-size: 36rpx;
+  margin: 40rpx;
+}
+
+.content {
+}
+
+.code {
+  color: red;
+}
