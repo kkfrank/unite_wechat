@@ -4,13 +4,13 @@
     <view class="question">{{index + startIndex}}、{{item.question}}</view>
     <radio-group wx:if="{{!item.isMultiple}}" class="answers" bindchange="changeAnswer" data-item="{{item}}" data-index="{{index}}" >
       <label wx:for="{{item.answers}}" wx:for-index="answerIndex" wx:for-item="answer" class="answer">
-        <radio value="{{answer}}"  /> 
+        <radio value="{{answerIndex}}"  /> 
         {{optionsMap[answerIndex]}}、{{answer}}
       </label>
     </radio-group>
     <checkbox-group wx:else class="answers" bindchange="changeAnswer" data-item="{{item}}" data-index="{{index}}">
       <label wx:for="{{item.answers}}" wx:for-index="answerIndex" wx:for-item="answer" class="answer" >
-        <checkbox value="{{answer}}"  /> 
+        <checkbox value="{{answerIndex}}"  /> 
         {{optionsMap[answerIndex]}}、{{answer}}
       </label>
     </checkbox-group>

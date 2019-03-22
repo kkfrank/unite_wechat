@@ -34,11 +34,20 @@ Component({
    */
   methods: {
     changeAnswer(e) {
+      
       let item = e.target.dataset.item
       let index = e.target.dataset.index
-      let chooseAnswer = e.detail.value
-      item.chooseAnswer = chooseAnswer
+      item.chooseAnswerIndex = e.detail.value
+      if(item.chooseAnswerIndex instanceof Array) {
+        item.chooseAnswer = []
+        item.chooseAnswerIndex.map(ele=>{
+          item.chooseAnswer.push(item.answers[ele])
+        })
+      } else {
+        item.chooseAnswer = item.answers[item.chooseAnswerIndex]
+      }
       item.index = index
+      console.log(item)
       this.triggerEvent('answerQuestion', item)
     }
   }

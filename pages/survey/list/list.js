@@ -41,7 +41,7 @@ Page({
       }
       submitForm.questions.push({
         'id': ele.id,
-        'answer': ele.chooseAnswer instanceof Array ? ele.chooseAnswer.join('#') : ele.chooseAnswer,
+        'answer': ele.chooseAnswerIndex instanceof Array ? ele.chooseAnswerIndex.join('#') : ele.chooseAnswerIndex,
         'isMultiple': ele.isMultiple
       })
     })
@@ -60,9 +60,8 @@ Page({
       success(res) {
         if (res.confirm) {
           addSurvey(submitForm).then(res => {
-            console.log(res)
-            that.setData({
-              type: 2
+            wx.navigateTo({
+              url: `/pages/survey/finished/finished?couponCode=${res.couponCode}`,
             })
           })
         } else {
@@ -84,7 +83,8 @@ Page({
     }
     // 设置用户选择试卷答案
     this.setData({
-      [`survey${item.type}[${item.index}].chooseAnswer`]: item.chooseAnswer
+      [`survey${item.type}[${item.index}].chooseAnswer`]: item.chooseAnswer,
+      [`survey${item.type}[${item.index}].chooseAnswerIndex`]: item.chooseAnswerIndex
     })
   },
   /**
@@ -117,7 +117,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    
   },
 
   /**

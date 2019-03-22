@@ -31,7 +31,7 @@ Page({
       }
     } else {
       wx.navigateTo({
-        url: e.target.dataset.url
+        url: `${e.target.dataset.url}?id=${this.data.user.id}`
       })
     }
   },

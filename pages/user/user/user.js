@@ -1,4 +1,5 @@
 // pages/user/user.js
+import { getById } from '../../../api/users.js'
 Page({
   // 点击我的礼物，去我的礼物页面
   toMyGift() {
@@ -30,7 +31,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    getById(options.id).then(res=>{
+      this.setData({
+        'user': res
+      })
+      console.log(res)
+    })
   },
 
   /**
