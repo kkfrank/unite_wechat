@@ -56,17 +56,16 @@ Page({
 
     let that = this
     wx.showModal({
+      showCancel: false,
       title: '提示',
       content: '问卷至此结束，凭问卷赠予优惠码购买Unite Shanghai 2019 门票获100元优惠！优惠码仅限使用一次，请妥善使用和保管。感谢您对Unity的支持！',
       success(res) {
         if (res.confirm) {
           addSurvey(submitForm).then(res => {
-            wx.navigateTo({
+            wx.redirectTo({
               url: `/pages/survey/finished/finished?couponCode=${res.couponCode}`,
             })
           })
-        } else {
-          console.log('用户点击取消')
         }
       }
     })
