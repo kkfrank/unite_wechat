@@ -19,8 +19,7 @@ Page({
         wx.navigateTo({
           url: '../survey/finished/finished?couponCode=' + this.data.survey.couponCode
         })
-      }
-      if (!this.data.survey.surveyType) {
+      } else if (!this.data.survey.surveyType) {
         wx.navigateTo({
           url: '../survey/wait/wait'
         })
@@ -110,6 +109,7 @@ Page({
       this.setData({
         'survey': res
       })
+      wx.setStorageSync('survey', res)
     })
   },
 

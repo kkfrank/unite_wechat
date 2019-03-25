@@ -4,21 +4,21 @@
       <text class="must">*</text>
       <text>姓名</text>
     </view>
-    <input focus="true" type="text" placeholder="请输入姓名" bindinput="bindNameInput" value="{{user.name}}" />
+    <input auto-focus="true" focus="true" type="text" placeholder="请输入姓名" placeholder-class="placeholder" bindinput="bindNameInput" value="{{user.name}}" />
   </view>
   <view class="form-item">
     <view>
       <text class="must">*</text>
       <text>邮箱</text>
     </view>
-    <input focus="true" type="text" placeholder="请输入邮箱" bindinput="bindEmailInput" value="{{user.email}}" />
+    <input type="text" placeholder-class="placeholder" placeholder="请输入邮箱" bindinput="bindEmailInput" value="{{user.email}}" />
   </view>
   <view class="form-item">
     <view>
       <text class="must">*</text>
       <text>公司</text>
     </view>
-    <input type="text" placeholder="请输入公司" bindinput="bindCompanyInput" value="{{user.company}}" />
+    <input type="text" placeholder="请输入公司" placeholder-class="placeholder" bindinput="bindCompanyInput" value="{{user.company}}" />
   </view>
   <view class="form-item">
     <view>
@@ -29,7 +29,10 @@
       <view class="picker" wx:if="{{user.industry}}">
         {{user.industry}}
       </view>
-      <input wx:else type="text" placeholder="请选择行业" />
+      <view class="placeholder"  wx:else>
+        请选择行业
+      </view>
+      <!-- <input wx:else type="text" placeholder="请选择行业" /> -->
     </picker>
   </view>
   <view class="form-item">
@@ -41,7 +44,10 @@
       <view class="picker" wx:if="{{user.profession}}">
         {{user.profession}}
       </view>
-      <input wx:else type="text" placeholder="请选择职位" />
+      <view class="placeholder"  wx:else>
+        请选择职位
+      </view>
+      <!-- <input wx:else type="text" placeholder="请选择职位" /> -->
     </picker>
   </view>
   <view class="check-item">

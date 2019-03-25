@@ -204,9 +204,9 @@ Page({
     ],
     user: {
       name: null,
-      industry: null,
+      industry: '',
       email: null,
-      profession: null,
+      profession: '',
       company: null
     }
   },

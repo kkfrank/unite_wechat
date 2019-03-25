@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/register/register",
     "pages/survey/list/list",
     "pages/nav/nav",
-    "pages/register/register",
     "pages/agenda/list/list",
     "pages/user/argument/argument",
     "pages/place/list/list",

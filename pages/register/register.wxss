@@ -43,7 +43,13 @@ checkbox .wx-checkbox-input {
 checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   background: #3296fa;
 }
-
+picker {
+  width: 100%;
+}
+.placeholder {
+  color: #999;
+  font-size: 36rpx;
+}
 checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   width: 32rpx;
   height: 32rpx;

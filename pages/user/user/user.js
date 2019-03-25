@@ -18,12 +18,6 @@ Page({
    */
   data: {
     user: {
-      name: 'kobe',
-      industry: 'IT',
-      telephone: '13020271731',
-      email: '2025506282@qq.com',
-      profession: 'Web开发',
-      company: 'Unity'
     }
   },
 

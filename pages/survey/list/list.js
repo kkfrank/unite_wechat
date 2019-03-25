@@ -92,6 +92,7 @@ Page({
     user:{},
     type: 1,
     typeName: null,
+    surveyType: null,
     surveyZero: surveyZero,
     surveyA: surveyA,
     surveyB: surveyB,
@@ -102,9 +103,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var user = JSON.parse(wx.getStorageSync('user'));
+    const user = JSON.parse(wx.getStorageSync('user'));
     this.setData({
       user:user
+    })
+    this.setData({
+      survey: wx.getStorageSync('survey')
     })
   },
 
