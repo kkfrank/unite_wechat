@@ -41,7 +41,6 @@ Page({
   data: {
     tips: '现在王老师正在讲课，是否前往?',
     user: {
-      id: 2
     },
     // 检查survey
     survey: {},
@@ -98,6 +97,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    var user = JSON.parse(wx.getStorageSync('user'));
+    this.setData({
+      user: user
+    })
     checkSurvey(this.data.user.id).then((res) => {
       this.setData({
         'survey': res

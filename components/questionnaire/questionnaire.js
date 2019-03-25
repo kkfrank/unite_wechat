@@ -47,7 +47,6 @@ Component({
         item.chooseAnswer = item.answers[item.chooseAnswerIndex]
       }
       item.index = index
-      console.log(item)
       this.triggerEvent('answerQuestion', item)
     }
   }
