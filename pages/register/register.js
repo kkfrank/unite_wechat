@@ -145,7 +145,7 @@ Page({
         })
         return;
       }
-      if(ret.status){
+      if(res.status){
         wx.setStorageSync('user', JSON.stringify(res['user']));
         wx.redirectTo({
           url: '../nav/nav',
