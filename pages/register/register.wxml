@@ -37,7 +37,7 @@
       <text class="must">*</text>
       <text>职位</text>
     </view>
-    <picker bindchange="bindProfessionInput" value="{{index}}" range="{{industries}}">
+    <picker bindchange="bindProfessionInput" value="{{index}}" range="{{professions}}">
       <view class="picker" wx:if="{{user.profession}}">
         {{user.profession}}
       </view>

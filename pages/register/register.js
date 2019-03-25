@@ -25,7 +25,6 @@ Page({
     this.setData({
       'user.industry': this.data.industries[index]
     })
-    console.log(e)
   },
   /***
    * 监听用户输入姓名
@@ -113,25 +112,41 @@ Page({
       })
       return false;
     }
-    wx.redirectTo({
-      url: '../nav/nav',
-    })
-    return false;
+    // wx.redirectTo({
+    //   url: '../nav/nav',
+    // })
+    // return false;
     util.showLoading();
     let openId = wx.getStorageSync('openId');
+    let telephone = '';
+    let unionId = ''
     let {
+      name,
       email,
+      industry,
       profession,
       company
     } = this.data.user
     userApi.register({
+      "name":name,
       "email": email,
+      "industry": industry,
       "company": company,
-      "position": profession,
-      "openId": openId
+      "profession": profession,
+      "open_id": openId,
+      "union_id": unionId,
+      telephone: telephone
     }).then(res => {
+     // wx.setStorageSync('user', JSON.stringify(users[0]));
       console.log('res', res)
-      if (res && res.code === '200') {
+      if(res.errMsg){
+        util.showToast({
+          title: res.errMsg
+        })
+        return;
+      }
+      if(ret.status){
+        wx.setStorageSync('user', JSON.stringify(res['user']));
         wx.redirectTo({
           url: '../nav/nav',
         })
@@ -144,9 +159,9 @@ Page({
     }).finally(() => {
       util.hideLoading();
       //
-      wx.redirectTo({
-        url: '../nav/nav',
-      })
+      // wx.redirectTo({
+      //   url: '../nav/nav',
+      // })
     })
 
     // console.log(e.detail.errMsg)
@@ -228,27 +243,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
 
   }
 })

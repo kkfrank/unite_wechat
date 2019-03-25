@@ -18,6 +18,7 @@ Page({
    * 用户点击提交调查问卷
    */
   submit() {
+   console.log(this.data.user)
     let typeMap = new Map([
       ['下午场技术讲座', 'surveyA'],
       ['Workshop', 'surveyB'],
@@ -31,7 +32,7 @@ Page({
     let list = [...this.data.surveyZero, ...this.data[typeMap.get(this.data.typeName)]]
     let noAnswerIndex = 0
     let submitForm = {
-      'userId': '1',
+      'userId': this.data.user['id'],
       'type': typeNameMap.get(this.data.typeName),
       'questions': []
     }
@@ -91,6 +92,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    user:{},
     type: 1,
     typeName: null,
     surveyZero: surveyZero,
@@ -103,7 +105,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    var user = JSON.parse(wx.getStorageSync('user'));
+    this.setData({
+      user:user
+    })
   },
 
   /**
