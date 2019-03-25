@@ -18,7 +18,6 @@ Page({
    * 用户点击提交调查问卷
    */
   submit() {
-   console.log(this.data.user)
     let typeMap = new Map([
       ['下午场技术讲座', 'surveyA'],
       ['Workshop', 'surveyB'],

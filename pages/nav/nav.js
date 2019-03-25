@@ -101,7 +101,12 @@ Page({
     this.setData({
       user: user
     })
+    wx.showLoading({
+      title: '加载中...',
+      icon: 'none'
+    })
     checkSurvey(this.data.user.id).then((res) => {
+      wx.hideLoading()
       this.setData({
         'survey': res
       })
