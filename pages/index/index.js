@@ -97,6 +97,7 @@ Page({
           // jsut for test
           //wx.redirectTo({ url: '/pages/register/register' })
         }).finally(() => {
+          util.hideLoading();
         })
       }
     })

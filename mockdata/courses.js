@@ -30,7 +30,7 @@ var courses = [
     id: "4",
     startTime: "2019-03-29 12:00",
     endTime: "2019-03-29 14:00",
-    title: '午饭+午休',
+    title: '午休',
     isCourse: false
   },
   {
