@@ -74,8 +74,10 @@ Page({
           console.log('success', res)
           var openId = res.openid;
           var sessionKey = res.sessionKey
+          var token = res.token
           wx.setStorageSync('openId', openId);
           wx.setStorageSync('skey', sessionKey);
+          wx.setStorageSync('jwt_token', token);
           //userApi.getByUnionId(openId).then(res1 => {
           userApi.search({ 'open_id': openId}).then(users => {
             console.log('res1', users)

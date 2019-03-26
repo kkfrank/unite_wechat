@@ -1,15 +1,21 @@
 const API_BASE_URL = "http://10.86.33.5:5003/v1";
 //const API_BASE_URL = "http://127.0.0.1:5003/v1";
 
-const request = (method, url, data) => {
+const request = (method, url, data,header = {}) => {
   let _url = API_BASE_URL + url
+  let token = wx.getStorageSync('jwt_token');
+  let auth = {}
+  if(token){
+    auth['Authorization'] = `${token}`
+  }
   return new Promise((resolve, reject) => {
     wx.request({
       url: _url,
       method: method,
       data: data,
       header: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        ...auth
       },
       success(request) {
         resolve(request.data)
