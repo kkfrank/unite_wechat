@@ -18,6 +18,7 @@ const request = (method, url, data,header = {}) => {
         ...auth
       },
       success(request) {
+        console.log(request)
         resolve(request.data)
       },
       fail(error) {

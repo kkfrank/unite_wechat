@@ -43,7 +43,7 @@ Page({
         url: '../user/user/user'
       },
       {
-        name: '关于Unity',
+        name: '关于活动',
         url: '../unity/unity'
       }
     ]

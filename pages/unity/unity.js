@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: 'https://unity3d.com/cn/company',
-    wechat: 'wx1314689',
-    telephone: '13020271731'
+    url: 'https://unite2019.csdn.net/',
+    email: 'renlj@csdn.net',
+    telephone: '18310352546'
   },
 
   /**
