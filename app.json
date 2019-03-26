@@ -26,9 +26,7 @@
     "pages/user/gift/gift",
     "pages/agenda/detail/detail",
     "pages/survey/detail/detail",
-    "pages/browser/browser",
-    "pages/survey/finished/finished",
-    "pages/survey/wait/wait"
+    "pages/browser/browser"
   ],
   "window": {
     "backgroundTextStyle": "light",

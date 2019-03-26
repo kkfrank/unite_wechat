@@ -24,10 +24,6 @@
   font-size: 36rpx;
   margin: 40rpx;
 }
-
-.content {
-}
-
 .code {
   color: red;
 }

@@ -1,4 +1,4 @@
-<view class="box">
+<view class="box" wx:if="{{!survey.couponCode}}">
   <questionnaire bind:answerQuestion="answerQuestion" list="{{surveyZero}}" surveyType="{{survey.surveyType}}"/>
   <questionnaire wx:if="{{typeName==='下午场技术讲座'}}" startIndex="{{surveyZero.length + 1}}" bind:answerQuestion="answerQuestion" list="{{surveyA}}" />
   <questionnaire wx:if="{{typeName==='Workshop'}}" startIndex="{{surveyZero.length + 1}}" bind:answerQuestion="answerQuestion" list="{{surveyB}}" />
@@ -6,4 +6,10 @@
   <view class="submit-box" wx:if="{{typeName!==null}}">
     <button bindtap='submit'>提交</button>
   </view>
+</view>
+<view wx:elif="{{survey.couponCode && survey.surveyType}}">
+  <finished couponCode="{{survey.couponCode}}" />
+</view>
+<view wx:else>
+  <wait />
 </view>

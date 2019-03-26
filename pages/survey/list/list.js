@@ -11,7 +11,7 @@ import {
   surveyC
 } from '../../../mockdata/survey/surveyC.js'
 import {
-  addSurvey
+  addSurvey,checkSurvey
 } from '../../../api/survey.js'
 Page({
   /**
@@ -60,14 +60,14 @@ Page({
     })
     addSurvey(submitForm).then(res => {
       wx.hideLoading()
+      this.setData({
+        'survey.couponCode': res.couponCode
+      })
       wx.showModal({
         showCancel: false,
         title: '提示',
         content: '问卷至此结束，凭问卷赠予优惠码购买Unite Shanghai 2019 门票获100元优惠！优惠码仅限使用一次，请妥善使用和保管。感谢您对Unity的支持！',
         success(resp) {
-          wx.redirectTo({
-            url: `/pages/survey/finished/finished?couponCode=${res.couponCode}`,
-          })
         }
       })
     })
@@ -97,7 +97,7 @@ Page({
     user:{},
     type: 1,
     typeName: null,
-    surveyType: null,
+    surveyType: null, // 问卷类型
     surveyZero: surveyZero,
     surveyA: surveyA,
     surveyB: surveyB,
@@ -112,8 +112,16 @@ Page({
     this.setData({
       user:user
     })
-    this.setData({
-      survey: wx.getStorageSync('survey')
+    wx.showLoading({
+      title: '加载中...',
+      icon: 'none'
+    })
+    checkSurvey(this.data.user.id).then((res) => {
+      wx.hideLoading()
+      this.setData({
+        'survey': res
+      })
+      wx.setStorageSync('survey', res)
     })
   },
 
@@ -128,7 +136,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    
+      
   },
 
   /**

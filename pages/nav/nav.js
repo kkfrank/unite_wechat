@@ -13,26 +13,9 @@ Page({
    * 用户跳转不同的nav
    */
   switchNav(e) {
-    if (e.target.dataset.survey) {
-      // 判断是否含有优惠码
-      if (this.data.survey.couponCode) {
-        wx.navigateTo({
-          url: `../survey/finished/finished?couponCode=${this.data.survey.couponCode}`
-        })
-      } else if (!this.data.survey.surveyType) {
-        wx.navigateTo({
-          url: '../survey/wait/wait'
-        })
-      } else {
-        wx.navigateTo({
-          url: e.target.dataset.url
-        })
-      }
-    } else {
-      wx.navigateTo({
-        url: `${e.target.dataset.url}?id=${this.data.user.id}`
-      })
-    }
+    wx.navigateTo({
+      url: `${e.target.dataset.url}?id=${this.data.user.id}`
+    })
   },
   /**
    * 页面的初始数据
@@ -53,8 +36,7 @@ Page({
       },
       {
         name: '调查问卷',
-        url: '../survey/list/list',
-        isSurvey: true
+        url: '../survey/list/list'
       },
       {
         name: '个人中心',
@@ -88,23 +70,6 @@ Page({
     this.setData({
       user: user
     })
-    if(!wx.getStorageSync('survey').couponCode){
-      wx.showLoading({
-        title: '加载中...',
-        icon: 'none'
-      })
-      checkSurvey(this.data.user.id).then((res) => {
-        wx.hideLoading()
-        this.setData({
-          'survey': res
-        })
-        wx.setStorageSync('survey', res)
-      })
-    } else {
-      this.setData({
-        'survey': wx.getStorageSync('survey')
-      })
-    }
   },
 
   /**
