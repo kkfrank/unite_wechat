@@ -112,17 +112,24 @@ Page({
     this.setData({
       user:user
     })
-    wx.showLoading({
-      title: '加载中...',
-      icon: 'none'
-    })
-    checkSurvey(this.data.user.id).then((res) => {
-      wx.hideLoading()
+    if(wx.getStorageSync('survey').couponCode){
       this.setData({
-        'survey': res
+        'survey': wx.getStorageSync('survey')
       })
-      wx.setStorageSync('survey', res)
-    })
+    } else {
+      wx.showLoading({
+        title: '加载中...',
+        icon: 'none'
+      })
+      checkSurvey(this.data.user.id).then((res) => {
+        wx.hideLoading()
+        this.setData({
+          'survey': res
+        })
+        wx.setStorageSync('survey', res)
+      })
+    }
+    
   },
 
   /**
