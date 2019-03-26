@@ -11,7 +11,8 @@ import {
   surveyC
 } from '../../../mockdata/survey/surveyC.js'
 import {
-  addSurvey,checkSurvey
+  addSurvey,
+  checkSurvey
 } from '../../../api/survey.js'
 Page({
   /**
@@ -67,11 +68,10 @@ Page({
         showCancel: false,
         title: '提示',
         content: '问卷至此结束，凭问卷赠予优惠码购买Unite Shanghai 2019 门票获100元优惠！优惠码仅限使用一次，请妥善使用和保管。感谢您对Unity的支持！',
-        success(resp) {
-        }
+        success(resp) {}
       })
     })
-    
+
   },
   /***
    * 当用户选择不同的调查问卷时
@@ -94,7 +94,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user:{},
+    user: {},
+    isLoading: false,
     type: 1,
     typeName: null,
     surveyType: null, // 问卷类型
@@ -110,26 +111,23 @@ Page({
   onLoad: function(options) {
     const user = JSON.parse(wx.getStorageSync('user'));
     this.setData({
-      user:user
+      user: user
     })
-    if(wx.getStorageSync('survey').couponCode){
+    wx.showLoading({
+      title: '加载中...',
+      icon: 'none'
+    })
+    this.setData({
+      'isLoading': true
+    })
+    checkSurvey(this.data.user.id).then((res) => {
+      wx.hideLoading()
       this.setData({
-        'survey': wx.getStorageSync('survey')
+        'survey': res,
+        'isLoading': false
       })
-    } else {
-      wx.showLoading({
-        title: '加载中...',
-        icon: 'none'
-      })
-      checkSurvey(this.data.user.id).then((res) => {
-        wx.hideLoading()
-        this.setData({
-          'survey': res
-        })
-        wx.setStorageSync('survey', res)
-      })
-    }
-    
+      wx.setStorageSync('survey', res)
+    })
   },
 
   /**
@@ -143,7 +141,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-      
+
   },
 
   /**
