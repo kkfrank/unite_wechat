@@ -63,6 +63,7 @@ Page({
       this.setData({
         'survey.couponCode': res.couponCode
       })
+      wx.setStorageSync('survey', res)
       wx.showModal({
         showCancel: false,
         title: '提示',

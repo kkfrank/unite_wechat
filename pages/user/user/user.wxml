@@ -25,7 +25,7 @@
   <view class="link-box">
     <view class="user-item">
       <view>我的优惠</view>
-      <view>{{user.coupon}}</view>
+      <view>{{user.coupon?user.coupon:''}}</view>
     </view>
   </view>
   <!-- <view class="link-box">
