@@ -1,5 +1,5 @@
 <view class="box">
-  <questionnaire bind:answerQuestion="answerQuestion" list="{{surveyZero}}" />
+  <questionnaire bind:answerQuestion="answerQuestion" list="{{surveyZero}}" surveyType="{{survey.surveyType}}"/>
   <questionnaire wx:if="{{typeName==='下午场技术讲座'}}" startIndex="{{surveyZero.length + 1}}" bind:answerQuestion="answerQuestion" list="{{surveyA}}" />
   <questionnaire wx:if="{{typeName==='Workshop'}}" startIndex="{{surveyZero.length + 1}}" bind:answerQuestion="answerQuestion" list="{{surveyB}}" />
   <questionnaire wx:if="{{typeName==='我没有参与下午的活动'}}" startIndex="{{surveyZero.length + 1}}" bind:answerQuestion="answerQuestion" list="{{surveyC}}" />

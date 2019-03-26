@@ -31,10 +31,12 @@ checkbox {
   height: 32rpx;
   margin-right: 20rpx;
 }
+
 .checkbox {
   display: flex;
   align-items: baseline;
 }
+
 checkbox .wx-checkbox-input {
   width: 32rpx;
   height: 32rpx;
@@ -43,13 +45,16 @@ checkbox .wx-checkbox-input {
 checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   background: #3296fa;
 }
+
 picker {
   width: 100%;
 }
+
 .placeholder {
   color: #999;
   font-size: 36rpx;
 }
+
 checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   width: 32rpx;
   height: 32rpx;
@@ -63,12 +68,18 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 }
 
 .check-item label>view {
-  font-size: 24rpx;
+  font-size: 32rpx;
   height: 36rpx;
   line-height: 36rpx;
   display: inline-block;
-  border-bottom: 1rpx solid #999;
   margin-bottom: 4rpx;
+}
+.check-item  .checkbox-group {
+  display: inline-block;
+}
+.check-item  text {
+  border-bottom: 1rpx solid #999;
+  font-size: 32rpx;
 }
 
 .box>.form-item .picker {

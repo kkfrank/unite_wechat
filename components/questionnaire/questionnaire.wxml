@@ -4,7 +4,7 @@
     <view class="question">{{index + startIndex}}、{{item.question}}</view>
     <radio-group wx:if="{{!item.isMultiple}}" class="answers" bindchange="changeAnswer" data-item="{{item}}" data-index="{{index}}" >
       <label wx:for="{{item.answers}}" wx:for-index="answerIndex" wx:for-item="answer" class="answer">
-        <radio value="{{answerIndex}}"  /> 
+        <radio value="{{answerIndex}}" disabled="{{item.isChangeSurvey&&(!((surveyType===optionsMap[answerIndex])||(surveyType === 'ALL')))}}" /> 
         {{optionsMap[answerIndex]}}、{{answer}}
       </label>
     </radio-group>

@@ -17,7 +17,7 @@ Page({
       // 判断是否含有优惠码
       if (this.data.survey.couponCode) {
         wx.navigateTo({
-          url: '../survey/finished/finished?couponCode=' + this.data.survey.couponCode
+          url: `../survey/finished/finished?couponCode=${this.data.survey.couponCode}`
         })
       } else if (!this.data.survey.surveyType) {
         wx.navigateTo({
@@ -47,18 +47,6 @@ Page({
         name: '日程',
         url: '../agenda/list/list'
       },
-      // {
-      //   name: '活动',
-      //   url: '../activity/list/list'
-      // },
-      // {
-      //   name: '赞助商',
-      //   url: '../sponsors/list/list'
-      // },
-      // {
-      //   name: '场地',
-      //   url: '../place/list/list'
-      // },
       {
         name: '讲师',
         url: '../teacher/list/list'
@@ -100,17 +88,23 @@ Page({
     this.setData({
       user: user
     })
-    wx.showLoading({
-      title: '加载中...',
-      icon: 'none'
-    })
-    checkSurvey(this.data.user.id).then((res) => {
-      wx.hideLoading()
-      this.setData({
-        'survey': res
+    if(!wx.getStorageSync('survey').couponCode){
+      wx.showLoading({
+        title: '加载中...',
+        icon: 'none'
       })
-      wx.setStorageSync('survey', res)
-    })
+      checkSurvey(this.data.user.id).then((res) => {
+        wx.hideLoading()
+        this.setData({
+          'survey': res
+        })
+        wx.setStorageSync('survey', res)
+      })
+    } else {
+      this.setData({
+        'survey': wx.getStorageSync('survey')
+      })
+    }
   },
 
   /**

@@ -12,6 +12,7 @@ Component({
         // 新版本基础库不推荐使用这个字段，而是使用 Component 构造器的 observer 字段代替（这样会有更强的功能和更好的性能）
       }
     },
+    surveyType: String,
     list: {
       type: Array,
       value: [],

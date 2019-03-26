@@ -51,12 +51,13 @@
     </picker>
   </view>
   <view class="check-item">
-    <checkbox-group bindchange="changeChecked">
+    <checkbox-group bindchange="changeChecked" class="checkbox-group">
       <label class="checkbox">
         <checkbox  checked="{{isChecked}}" />
-        <view bindtap="toService">我已阅读同意该服务条款</view>
+        <view>我已阅读同意该</view>
       </label>
     </checkbox-group>
+    <text bindtap="toService">服务条款</text>
   </view>
   <view class="form-submit mt30">
     <!-- <button open-type="getPhoneNumber" bindgetphonenumber="register">注册</button> -->

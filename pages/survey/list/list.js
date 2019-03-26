@@ -54,7 +54,12 @@ Page({
     }
 
     let that = this
+    wx.showLoading({
+      title: '加载中...',
+      icon: 'none'
+    })
     addSurvey(submitForm).then(res => {
+      wx.hideLoading()
       wx.showModal({
         showCancel: false,
         title: '提示',
