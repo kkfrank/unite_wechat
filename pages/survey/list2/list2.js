@@ -76,14 +76,7 @@ Page({
     })
   },
   onLoad: function(options) {
-    const user = JSON.parse(wx.getStorageSync('user'))
-    this.setData({
-      user: user
-    })
-    this.refreshSurvey()
-    this.setData({
-      'timer': setInterval(this.refreshSurvey, 1000 * 60)
-    })
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -96,7 +89,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    const user = JSON.parse(wx.getStorageSync('user'))
+    this.setData({
+      user: user
+    })
+    this.refreshSurvey()
+    this.setData({
+      'timer': setInterval(this.refreshSurvey, 1000 * 60)
+    })
   },
 
   /**

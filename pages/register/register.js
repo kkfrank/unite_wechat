@@ -128,7 +128,7 @@ Page({
       company
     } = this.data.user
     userApi.register({
-      "name":name,
+      "name": name,
       "email": email,
       "industry": industry,
       "company": company,
@@ -137,10 +137,10 @@ Page({
       "union_id": unionId,
       telephone: telephone
     }).then(res => {
-        wx.setStorageSync('user', JSON.stringify(res.data));
-        wx.redirectTo({
-          url: '../nav/nav',
-        })
+      wx.setStorageSync('user', JSON.stringify(res));
+      wx.redirectTo({
+        url: '../nav/nav',
+      })
     }).catch(error => {
       util.showToast({
         title: error.errMsg
