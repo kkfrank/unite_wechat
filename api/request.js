@@ -26,7 +26,7 @@ const request = (method, url, data,header = {}) => {
             url: '/pages/index/index',
           })
           wx.showToast({
-            title: res.data.errMsg,
+            title: res.data.msg,
             icon: 'none'
           })
         }
