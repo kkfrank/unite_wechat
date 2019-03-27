@@ -7,6 +7,7 @@
         <text>主题: </text>
         <text>{{item.title}}</text>
       </view>
+      <view class='mb20'>{{helper.computerTime(item.startTime,item.endTime)}}</view>
       <view class='mb20' wx:if="{{helper.getItemByKey(teachers,'id',item.teacherId).name}}">
         <text>演讲人: </text>
         <text>{{helper.getItemByKey(teachers,'id',item.teacherId).name}}</text>
