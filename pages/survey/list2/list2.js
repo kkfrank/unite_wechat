@@ -1,16 +1,4 @@
 import {
-  surveyZero
-} from '../../../mockdata/survey/surveyZero.js'
-import {
-  surveyA
-} from '../../../mockdata/survey/surveyA.js'
-import {
-  surveyB
-} from '../../../mockdata/survey/surveyB.js'
-import {
-  surveyC
-} from '../../../mockdata/survey/surveyC.js'
-import {
   survey
 } from '../../../mockdata/survey/index.js'
 import {
@@ -27,11 +15,10 @@ import {
 } from '../../../api/survey.js'
 Page({
   toDetail(ev) {
-    var item = ev.currentTarget.dataset.item;
-
+    var item = ev.currentTarget.dataset.item
     var {
       surveyIds,id
-    } = item;
+    } = item
     wx.navigateTo({
       url: `../detail2/detail?surveyIds=${surveyIds}&courseId=${id}`
     })
@@ -41,14 +28,11 @@ Page({
    */
   data: {
     user: {},
+    timer: null,
     isLoading: false,
     type: 1,
     typeName: null,
     surveyType: null, // 问卷类型
-    surveyZero: surveyZero,
-    surveyA: surveyA,
-    surveyB: surveyB,
-    surveyC: surveyC,
     survey: survey,
     unSubmitcourses: [],
     teachers: teachers
@@ -71,7 +55,7 @@ Page({
           return false
         }
         // 判断该课程是否已经到时间可以答题
-        if (!compareDate('2019-03-29 16:29:11', item.startTime, item.endTime)) {
+        if (!compareDate(nowDate, item.startTime, item.endTime)) {
           return false
         }
         return true
@@ -83,13 +67,15 @@ Page({
 
   },
   onLoad: function(options) {
-    const user = JSON.parse(wx.getStorageSync('user'));
+    const user = JSON.parse(wx.getStorageSync('user'))
     this.setData({
       user: user
     })
     this.refreshSurvey()
+    this.setData({
+      'timer': setInterval(this.refreshSurvey, 1000 * 60)
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -115,6 +101,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-
+    clearInterval(this.data.timer)
   }
 })

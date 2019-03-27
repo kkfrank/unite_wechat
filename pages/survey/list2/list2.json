@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "questionnaire": "../../../components/questionnaire/questionnaire"
+    "questionnaire": "../../../components/questionnaire/questionnaire",
+    "wait": "../../../components/survey/wait/wait"
   }
 }
