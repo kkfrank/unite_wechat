@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/nav/nav",
     "pages/survey/list2/list2",
-    "pages/index/index",
     "pages/survey/list/list",
     "pages/register/register",
     "pages/agenda/list/list",

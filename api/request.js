@@ -18,9 +18,18 @@ const request = (method, url, data,header = {}) => {
         'Content-Type': 'application/json',
         ...auth
       },
-      success(request) {
-        console.log(request)
-        resolve(request.data)
+      success(res) {
+        if(res.data.status) {
+          resolve(res.data.data)
+        } else {
+          wx.redirectTo({
+            url: '/pages/index/index',
+          })
+          wx.showToast({
+            title: res.data.errMsg,
+            icon: 'none'
+          })
+        }
       },
       fail(error) {
         util.showToast({

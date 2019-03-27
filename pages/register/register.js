@@ -137,22 +137,11 @@ Page({
       "union_id": unionId,
       telephone: telephone
     }).then(res => {
-     // wx.setStorageSync('user', JSON.stringify(users[0]));
-      console.log('res', res)
-      if(res.errMsg){
-        util.showToast({
-          title: res.errMsg
-        })
-        return;
-      }
-      if(res.status){
-        wx.setStorageSync('user', JSON.stringify(res['user']));
+        wx.setStorageSync('user', JSON.stringify(res.data));
         wx.redirectTo({
           url: '../nav/nav',
         })
-      }
     }).catch(error => {
-      console.log('error', error)
       util.showToast({
         title: error.errMsg
       })

@@ -37,7 +37,6 @@ Page({
       'userId': this.data.user['id'],
       'questions': []
     }
-    console.log(this.data.showSurvey)
     this.data.showSurvey.map((ele, index) => {
       if (!ele.chooseAnswer) {
         noAnswerIndex = index + 1
@@ -61,6 +60,9 @@ Page({
       icon: 'none'
     })
     addSurvey(submitForm).then(res => {
+      wx.redirectTo({
+        url: '/pages/survey/list2/list2',
+      })
       wx.hideLoading()
     })
   },
