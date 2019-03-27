@@ -1,5 +1,5 @@
 <!--pages/survey/detail2/detail.wxml-->
-<questionnaire bind:answerQuestion="answerQuestion" list="{{surveyZero}}" />
-<view class="submit-box" wx:if="{{typeName!==null}}">
-    <button bindtap='submit'>提交</button>
-  </view>
+<questionnaire bind:answerQuestion="answerQuestion" list="{{showSurvey}}" />
+<view class="submit-box">
+  <button bindtap='submit'>提交</button>
+</view>

@@ -1,1 +1,5 @@
 /* pages/survey/detail2/detail.wxss */
+.submit-box {
+  padding: 0 20rpx;
+  margin: 40rpx;
+}

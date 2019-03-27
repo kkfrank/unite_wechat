@@ -35,7 +35,6 @@ Component({
    */
   methods: {
     changeAnswer(e) {
-      
       let item = e.target.dataset.item
       let index = e.target.dataset.index
       item.chooseAnswerIndex = e.detail.value
