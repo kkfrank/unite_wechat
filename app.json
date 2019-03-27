@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/survey/list2/list2",
     "pages/index/index",
+    "pages/survey/list/list",
     "pages/nav/nav",
     "pages/register/register",
-    "pages/survey/list/list",
     "pages/agenda/list/list",
     "pages/user/argument/argument",
     "pages/place/list/list",
@@ -27,7 +28,6 @@
     "pages/agenda/detail/detail",
     "pages/survey/detail/detail",
     "pages/browser/browser",
-    "pages/survey/list2/list2",
     "pages/survey/detail2/detail"
   ],
   "window": {
