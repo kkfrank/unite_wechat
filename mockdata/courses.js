@@ -75,6 +75,15 @@ var courses = [
     endTime: "2019-03-29 17:20",
     title: 'Workshop ：项目性能诊断与美术指导',
     isCourse: false
+  },
+  {
+    id: "type",
+    surveyIds: ["Zero1", "Zero2", "Zero5", "Zero6", "Zero7", "Zero8"],
+    startTime: "2019-03-29 11:30",
+    endTime: "2019-03-29 17:20",
+    title: '问卷',
+    specialSurvey: true,
+    isCourse: false
   }
 ]
 export {courses}
