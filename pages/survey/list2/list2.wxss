@@ -1,0 +1,15 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ddd;
+  padding: 18rpx 30rpx;
+  font-size: 32rpx;
+  flex-direction:row;
+  position: relative;
+  align-items: center;
+}
+.detail-icon{
+  /* position: absolute;
+  right: 20rpx;
+  top:80rpx; */
+}

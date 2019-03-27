@@ -36,7 +36,7 @@ Page({
       },
       {
         name: '调查问卷',
-        url: '../survey/list/list'
+        url: '../survey/list2/list2'
       },
       {
         name: '个人中心',

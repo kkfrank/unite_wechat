@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    courses: [] 
+    courses: courses,
+    teachers: teachers
   },
   toDetail:function(ev){
     var item = ev.currentTarget.dataset.item;
@@ -28,20 +29,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var newCourses = courses.map(function(item){
-      if(item.teacherId){
-        return{
-          ...item,
-          teacher: util.getItemByKey(teachers, 'id', item.teacherId)
-        }
-      }else{
-        return item
-      }
-    })
-    console.log(newCourses)
-    this.setData({
-      courses:newCourses
-    })
+    // var newCourses = courses.map(function(item){
+    //   if(item.teacherId){
+    //     return{
+    //       ...item,
+    //       teacher: util.getItemByKey(teachers, 'id', item.teacherId)
+    //     }
+    //   }else{
+    //     return item
+    //   }
+    // })
+    // console.log(newCourses)
+    // this.setData({
+    //   courses:newCourses
+    // })
   },
 
   /**

@@ -1,6 +1,22 @@
 var computerTime = function (start, end) {
   return start +'-'+ end.split(' ')[1]
 }
+
+var getItemByKey = function(arr, key, val){
+  if (!arr || arr.length === 0 || !key) {
+    return {};
+  }
+  items =  arr.filter(function(item){
+    if(item[key] === val){
+      return true
+    }
+  })
+  if(items && items.length>0){
+    return items[0]
+  }
+  return {}
+}
 module.exports={
-  computerTime: computerTime
+  computerTime: computerTime,
+  getItemByKey: getItemByKey
 }

@@ -8,6 +8,7 @@ var courses = [
   },
   {
     id: "2", // 课程id
+    surveyIds:["Zero3"],
     teacherId:'lwx', // 讲师的id
     startTime: "2019-03-29 10:00", // 讲课开始时间
     endTime: "2019-03-29 11:00",// 讲课结束时间
@@ -18,6 +19,7 @@ var courses = [
     }, // 课程描述
   {
     id: "3",
+    surveyIds: ["Zero4"],
     teacherId: 'ly',
     startTime: "2019-03-29 11:00",
     endTime: "2019-03-29 12:00",
@@ -35,6 +37,7 @@ var courses = [
   },
   {
     id: "5",
+    surveyIds: ["A1"],
     teacherId: 'ycy',
     startTime: "2019-03-29 14:00",
     endTime: "2019-03-29 15:00",
@@ -45,6 +48,7 @@ var courses = [
   },
   {
     id: "6",
+    surveyIds: ["A2"],
     teacherId: 'zlm',
     startTime: "2019-03-29 15:00",
     endTime: "2019-03-29 16:00",
@@ -55,6 +59,7 @@ var courses = [
   },
   {
     id: "7",
+    surveyIds: ["A3"],
     teacherId: 'cl',
     startTime: "2019-03-29 16:00",
     endTime: "2019-03-29 17:00",
@@ -65,6 +70,7 @@ var courses = [
   },
   {
     id: "8",
+    surveyIds: ["B1", "B2","B3"],
     startTime: "2019-03-29 14:00",
     endTime: "2019-03-29 17:20",
     title: 'Workshop ：项目性能诊断与美术指导',

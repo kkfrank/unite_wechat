@@ -88,7 +88,7 @@ function showToast(options = {}) {
   wx.showToast({
     title: title,
     icon: icon || 'none',
-    duration: duration || 2000
+    duration: duration || 3000
   })
 }
 export {

@@ -10,7 +10,7 @@
       </view>
       <view class='mb20'>
         <text>演讲人: </text>
-        <text>{{item.teacher.name}}</text>
+        <text>{{helper.getItemByKey(teachers,'id',item.teacherId).name }}</text>
       </view>
       <text class='detail-icon'>></text>
     </block>
