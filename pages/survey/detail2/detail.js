@@ -61,7 +61,7 @@ Page({
     })
     addSurvey(submitForm).then(res => {
       wx.redirectTo({
-        url: '/pages/survey/list2/list2',
+        url: '/pages/nav/nav',
       })
       wx.hideLoading()
     })
