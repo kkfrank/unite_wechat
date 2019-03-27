@@ -37,13 +37,25 @@
   align-items: center;
   justify-content: center;
   background-color: #ddd;
+  position: relative;
   width: 250rpx;
   height: 250rpx;
   border-radius: 20rpx;
   margin: 40rpx 0 0;
   box-shadow: 10rpx 10rpx 10rpx 0 #e7e7e7;
 }
-
+.hot {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  top: 20rpx;
+  width: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #40a9ff;
+  height: 40rpx;
+}
 /* .nav>.nav-item:nth-child(-n + 4) {
   
 } */

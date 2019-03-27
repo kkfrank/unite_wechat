@@ -34,7 +34,7 @@ Page({
     typeName: null,
     surveyType: null, // 问卷类型
     survey: survey,
-    unSubmitcourses: [],
+    unSubmitcourses: [], // 当前时间还可以答题的课程
     teachers: teachers
   },
 
@@ -42,6 +42,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   refreshSurvey: function() {
+    this.setData({
+      isLoading: true
+    })
+    wx.showLoading({
+      title: '加载中...',
+      icon: 'none'
+    })
     checkSubmitSurvey(this.data.user.id).then(res => {
       let submitCourseIds = res.submitSurvey;
       let nowDate = res.time;
@@ -60,11 +67,13 @@ Page({
         }
         return true
       })
+      
       this.setData({
+        isLoading: false,
         unSubmitcourses: unSubmitcourses
       })
+      wx.hideLoading()
     })
-
   },
   onLoad: function(options) {
     const user = JSON.parse(wx.getStorageSync('user'))

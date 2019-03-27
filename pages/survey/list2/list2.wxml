@@ -1,6 +1,6 @@
 <wxs module="helper" src="../../../utils/helper.wxs"></wxs>
-
-<view class="list" wx:if="{{unSubmitcourses.length>0}}">
+<view wx:if="{{isLoading}}"></view>
+<view class="list" wx:elif="{{unSubmitcourses.length>0}}">
  <view class="item" wx:for="{{unSubmitcourses}}" bindtap="toDetail" wx:key="*this" data-item="{{item}}">
     <view>
       <view class='mb20'>
