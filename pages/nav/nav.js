@@ -110,9 +110,10 @@ Page({
     this.setData({
       user: user
     })
+    clearInterval(this.data.timer)
     this.refreshSurvey()
     this.setData({
-      'timer': setInterval(this.refreshSurvey, 1000 * 60)
+      'timer': setInterval(this.refreshSurvey, 1000*60)
     })
   },
 
@@ -121,16 +122,13 @@ Page({
    */
   onHide: function() {
     clearInterval(this.data.timer)
-    this.setData({
-      timer: null
-    })
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-
+    clearInterval(this.data.timer)
   },
 
   /**
