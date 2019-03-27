@@ -55,10 +55,6 @@ Page({
       })
       return false
     }
-    wx.showLoading({
-      title: '加载中...',
-      icon: 'none'
-    })
     addSurvey(submitForm).then(res => {
       wx.showToast({
         title: '提交成功',
@@ -68,7 +64,6 @@ Page({
           wx.reLaunch({
             url: '/pages/nav/nav',
           })
-          wx.hideLoading()
         }
       })
       
