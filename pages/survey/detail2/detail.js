@@ -60,7 +60,7 @@ Page({
       icon: 'none'
     })
     addSurvey(submitForm).then(res => {
-      wx.redirectTo({
+      wx.reLaunch({
         url: '/pages/nav/nav',
       })
       wx.hideLoading()
