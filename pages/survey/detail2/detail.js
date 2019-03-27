@@ -60,10 +60,18 @@ Page({
       icon: 'none'
     })
     addSurvey(submitForm).then(res => {
-      wx.reLaunch({
-        url: '/pages/nav/nav',
+      wx.showToast({
+        title: '提交成功',
+        icon: 'none',
+        duration: 2000,
+        success: function(){
+          wx.reLaunch({
+            url: '/pages/nav/nav',
+          })
+          wx.hideLoading()
+        }
       })
-      wx.hideLoading()
+      
     })
   },
   /**

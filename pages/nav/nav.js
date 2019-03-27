@@ -62,7 +62,7 @@ Page({
   data: {
     isLoading: false,
     unSubmitcourses:[],
-    tips: '现在王老师正在讲课，是否前往?',
+    timer: null,
     user: {
     },
     navList: [{
@@ -111,13 +111,19 @@ Page({
       user: user
     })
     this.refreshSurvey()
+    this.setData({
+      'timer': setInterval(this.refreshSurvey, 1000 * 60)
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function() {
-
+    clearInterval(this.data.timer)
+    this.setData({
+      timer: null
+    })
   },
 
   /**
