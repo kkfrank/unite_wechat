@@ -30,7 +30,7 @@ const surveyZero = [
   {
     id: 'Zero5',
     question: '您使用Unity的开发经验是',
-    answers: ['没有使用', '0-1年', '1-3年', '不赞同', '3年以上'],
+    answers: ['没有使用', '0-1年', '1-3年', '3年以上'],
     chooseAnswer: null,
     type: 'Zero'
   },
