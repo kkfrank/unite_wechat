@@ -28,7 +28,7 @@
       <view>{{user.coupon?user.coupon:''}}</view>
     </view>
   </view>
-  <view class="user-des">
+  <view class="user-des" wx:if="{{user.coupon}}">
     <view>优惠码说明: 本优惠码仅限Unite Shanghai 2019 技术通票（个人票）使用。购票官网请访问：https://unite2019.csdn.net/ 优惠码仅生效一次，请妥善保管和使用。</view>
   </view>
   <!-- <view class="link-box">

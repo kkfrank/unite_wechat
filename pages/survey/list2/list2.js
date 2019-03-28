@@ -14,6 +14,12 @@ import {
   checkSubmitSurvey
 } from '../../../api/survey.js'
 Page({
+  toUser() {
+    let user = JSON.parse(wx.getStorageSync('user'))
+    wx.redirectTo({
+      url: `/pages/user/user/user?id=${user.id}`
+    })
+  },
   toDetail(ev) {
     var item = ev.currentTarget.dataset.item
     var {
@@ -35,6 +41,7 @@ Page({
     surveyType: null, // 问卷类型
     survey: survey,
     unSubmitcourses: [], // 当前时间还可以答题的课程
+    submitcourses: [], // 当前时间已经答题的课程
     teachers: teachers
   },
 
@@ -70,6 +77,7 @@ Page({
       
       this.setData({
         isLoading: false,
+        submitCourseIds: submitCourseIds,
         unSubmitcourses: unSubmitcourses
       })
       wx.hideLoading()

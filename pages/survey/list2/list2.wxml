@@ -20,6 +20,6 @@
   </view>
 </view>
 <wait wx:else/>
-<view class="tips" wx:if="{{unSubmitcourses.length>0}}">
-  填写一场即可获取优惠码
+<view class="tips" wx:if="{{submitCourseIds.length>0}}" bindtap="toUser">
+  你已经问卷{{submitCourseIds.length}}场,点击查看优惠码
 </view>
