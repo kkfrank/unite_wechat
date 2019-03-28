@@ -71,4 +71,6 @@ text, view {
   align-items: center;
   background-color: #40a9ff;
   height: 40rpx;
+  padding: 6rpx;
+  font-size:38rpx;
 }

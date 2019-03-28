@@ -2,7 +2,12 @@
 text, view {
   font-family: PingFangSC-Semibold;
 }
+page{
+  height: 100%;
+}
 .box {
+  height: 100%;
+  overflow-y: hidden;
   position: relative;
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
