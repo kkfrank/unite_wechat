@@ -13,11 +13,6 @@ Page({
     this.setData({
       isLoading: true
     })
-    wx.showLoading({
-      title: '加载中...',
-      mask: true,
-      icon: 'none'
-    })
     checkSubmitSurvey(this.data.user.id).then(res => {
       let submitCourseIds = res.submitSurvey;
       let nowDate = res.time;
@@ -40,7 +35,6 @@ Page({
         isLoading: false,
         unSubmitcourses: unSubmitcourses
       })
-      wx.hideLoading()
     })
   },
   // 用户点击tips，查看相应活动
