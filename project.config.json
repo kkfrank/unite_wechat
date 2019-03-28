@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -32,13 +32,13 @@
 			"currentL": -1,
 			"list": []
 		},
+		"networkTimeout": {
+			"request": 5000,
+			"downloadFile": 10000
+		},
 		"miniprogram": {
 			"current": -1,
 			"list": []
-		},
-    "networkTimeout": {
-      "request": 5000,
-      "downloadFile": 10000
-    }
+		}
 	}
 }

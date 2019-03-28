@@ -9,6 +9,9 @@
   align-items: center;
   min-height: 80rpx;
 }
+.list {
+  padding-top: 80rpx;
+}
 
 .tips {
   position: fixed;

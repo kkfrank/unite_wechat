@@ -1,4 +1,4 @@
-// pages/place/detailAsset/detailAsset.js
+// pages/index/index2.js
 Page({
 
   /**
