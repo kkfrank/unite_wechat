@@ -35,8 +35,6 @@ Page({
         }
         return true
       })
-      console.log('unSubmitcourses')
-      console.log(unSubmitcourses)
       this.setData({
         isLoading: false,
         unSubmitcourses: unSubmitcourses

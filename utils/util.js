@@ -92,10 +92,10 @@ function showToast(options = {}) {
   })
 }
 function compareDate(nowDate, startDate, endDate, late = 30 * 60) {
-  let nowTime = parseInt(new Date(nowDate).getTime()/1000)
-  let startTime = parseInt(new Date(startDate).getTime()/1000)
-  let endTime = parseInt(new Date(endDate).getTime()/1000)
-  if ((nowTime - late) < endTime && ((nowTime -late) > startTime)) {
+  let nowTime = parseInt(new Date(nowDate.replace(/-/g, "/")).getTime()/1000)
+  let startTime = parseInt(new Date(startDate.replace(/-/g, "/")).getTime()/1000)
+  let endTime = parseInt(new Date(endDate.replace(/-/g, "/")).getTime()/1000)
+  if (((nowTime - late) < endTime) && ((nowTime -late) > startTime)) {
     return true
   }
   return false
