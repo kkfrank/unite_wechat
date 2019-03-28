@@ -24,3 +24,8 @@
 .link-box {
   margin-top: 20rpx;
 }
+.user-des {
+  padding: 0 20rpx;
+  color: #666;
+  line-height: 80rpx;
+}

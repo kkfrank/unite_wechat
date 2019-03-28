@@ -8,8 +8,25 @@
   position: relative;
   align-items: center;
 }
-.detail-icon{
-  /* position: absolute;
-  right: 20rpx;
-  top:80rpx; */
+
+.tips {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #40a9ff;
+  padding: 0 20rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.tips text {
+  display: inline-block;
+  padding-bottom: 10rpx;
 }

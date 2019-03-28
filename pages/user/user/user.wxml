@@ -24,9 +24,12 @@
   </view>
   <view class="link-box">
     <view class="user-item">
-      <view>我的优惠</view>
+      <view>我的优惠码</view>
       <view>{{user.coupon?user.coupon:''}}</view>
     </view>
+  </view>
+  <view class="user-des">
+    <view>优惠码说明: 本优惠码仅限Unite Shanghai 2019 技术通票（个人票）使用。购票官网请访问：https://unite2019.csdn.net/ 优惠码仅生效一次，请妥善保管和使用。</view>
   </view>
   <!-- <view class="link-box">
     <view class="user-item" bindtap='toMyGift'>

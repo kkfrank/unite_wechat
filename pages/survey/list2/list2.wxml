@@ -17,3 +17,6 @@
   </view>
 </view>
 <wait wx:else/>
+<view class="tips" wx:if="{{unSubmitcourses.length>0}}">
+  填写一场即可获取礼品
+</view>

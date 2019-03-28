@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/user/user/user",
     "pages/nav/nav",
     "pages/survey/list2/list2",
     "pages/survey/list/list",
@@ -22,7 +23,7 @@
     "pages/place/detail2D/detail2D",
     "pages/place/detailAsset/detailAsset",
     "pages/place/detailSubs/detailSubs",
-    "pages/user/user/user",
+    
     "pages/unity/unity",
     "pages/user/gift/gift",
     "pages/agenda/detail/detail",

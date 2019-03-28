@@ -19,12 +19,13 @@ const request = (method, url, data,header = {}) => {
         ...auth
       },
       success(res) {
+        console.log(res)
         if(res.data.status) {
           resolve(res.data.data)
         } else {
-          wx.redirectTo({
-            url: '/pages/index/index',
-          })
+          // wx.redirectTo({
+          //   url: '/pages/index/index',
+          // })
           wx.showToast({
             title: res.data.msg,
             icon: 'none'
