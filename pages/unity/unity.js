@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: 'https://unite2019.csdn.net/',
-    email: 'renlj@csdn.net',
-    telephone: '18310352546'
+    url: 'https://connect.unity.com/events/2019UnityShenZhenRS',
+    email: 'yuanchen@unity3d.com',
+    telephone: '15921266969'
   },
 
   /**

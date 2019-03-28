@@ -10,7 +10,6 @@
     <view class="contact-box">
       <view>邮箱：{{email}}</view>
       <view>联系方式：{{telephone}}</view>
-      <view>网址：{{url}}</view>
     </view>
   </view>
 </view>
