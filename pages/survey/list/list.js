@@ -57,6 +57,7 @@ Page({
     let that = this
     wx.showLoading({
       title: '加载中...',
+      mask: true,
       icon: 'none'
     })
     addSurvey(submitForm).then(res => {
@@ -114,6 +115,7 @@ Page({
     })
     wx.showLoading({
       title: '加载中...',
+      mask: true,
       icon: 'none'
     })
     this.setData({

@@ -1,6 +1,6 @@
 import * as util from '../utils/util.js'
-const API_BASE_URL = "https://unity-weapp.unity.com/v1";
-// const API_BASE_URL = "http://10.86.33.5:5003/v1";
+// const API_BASE_URL = "https://unity-weapp.unity.com/v1";
+const API_BASE_URL = "http://10.86.33.5:5003/v1";
 const request = (method, url, data,header = {}) => {
   let _url = API_BASE_URL + url
   let token = wx.getStorageSync('jwt_token');
@@ -21,7 +21,7 @@ const request = (method, url, data,header = {}) => {
         console.log(res)
         if(res.data.status) {
           resolve(res.data.data)
-        } else {
+        } else { 
           // wx.redirectTo({
           //   url: '/pages/index/index',
           // })
@@ -33,7 +33,7 @@ const request = (method, url, data,header = {}) => {
       },
       fail(error) {
         util.showToast({
-          title: error.errMsg
+          title: '网络异常'
         })
         reject(error)
       },
