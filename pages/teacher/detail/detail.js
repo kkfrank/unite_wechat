@@ -17,8 +17,7 @@ Page({
   onLoad: function (options) {
     wx.showLoading({
       title: 'loading',
-      mask: true,
-      icon: 'none'
+      mask: true
     })
     let courses = getCourseByTeacherId(options.id)
     let teacher = getTeacherById(options.id)

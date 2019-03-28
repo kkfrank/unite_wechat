@@ -57,8 +57,7 @@ Page({
     let that = this
     wx.showLoading({
       title: '加载中...',
-      mask: true,
-      icon: 'none'
+      mask: true
     })
     addSurvey(submitForm).then(res => {
       wx.hideLoading()
@@ -115,8 +114,7 @@ Page({
     })
     wx.showLoading({
       title: '加载中...',
-      mask: true,
-      icon: 'none'
+      mask: true
     })
     this.setData({
       'isLoading': true

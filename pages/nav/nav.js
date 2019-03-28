@@ -15,6 +15,7 @@ Page({
     })
     wx.showLoading({
       title: '加载中...',
+      mask: true,
       icon: 'none'
     })
     checkSubmitSurvey(this.data.user.id).then(res => {

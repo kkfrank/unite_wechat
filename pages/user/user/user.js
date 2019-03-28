@@ -27,8 +27,7 @@ Page({
   onLoad: function (options) {
     wx.showLoading({
       title: '加载中...',
-      mask: true,
-      icon: 'none'
+      mask: true
     })
     getById(options.id).then(res=>{
       this.setData({
