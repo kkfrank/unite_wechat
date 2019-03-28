@@ -1,6 +1,6 @@
 <wxs module="helper" src="../../../utils/helper.wxs"></wxs>
 
-<view class="list">
+<view class="list pb40">
  <view class="item" wx:for="{{courses}}" bindtap="toDetail" wx:key="*this" data-item="{{item}}">
     <view class='mb20'>{{helper.computerTime(item.startTime,item.endTime)}}</view>
     <block wx:if="{{item.isCourse}}">
