@@ -21,7 +21,7 @@ const request = (method, url, data,header = {}) => {
         console.log(res)
         if(res.data.status) {
           resolve(res.data.data)
-        } else {
+        } else { 
           // wx.redirectTo({
           //   url: '/pages/index/index',
           // })
@@ -33,7 +33,7 @@ const request = (method, url, data,header = {}) => {
       },
       fail(error) {
         util.showToast({
-          title: error.errMsg
+          title: '网络异常'
         })
         reject(error)
       },
