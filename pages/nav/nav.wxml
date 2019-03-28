@@ -1,10 +1,15 @@
-<!--pages/nav/nav.wxml-->
-<view class="nav">
-  <view class="nav-item" wx:for="{{navList}}" bindtap="switchNav" data-survey="{{item.isSurvey}}" data-url="{{item.url}}">
-    <view class="hot" wx:if="{{item.isSurvey&&unSubmitcourses.length>0}}">{{unSubmitcourses.length}}</view>
-    {{item.name}}
+<!--pages/index/index2.wxml-->
+<view class="box">
+  <view class="img">
+    <image mode='widthFix' src='../../images/bg-nav.png'></image>
   </view>
-  <view class="tips" bindtap="toSurvey" wx:if="{{unSubmitcourses.length>0}}">
-    <text>当前还有{{unSubmitcourses.length}}场问卷可以答题，是否前往？</text>
+  <view class="nav">
+    <view class="nav-item" wx:for="{{navList}}" bindtap="switchNav" data-survey="{{item.isSurvey}}" data-url="{{item.url}}">
+      <view class="hot" wx:if="{{item.isSurvey&&unSubmitcourses.length>0}}">{{unSubmitcourses.length}}</view>
+      {{item.name}}
+    </view>
+    <view class="tips" bindtap="toSurvey" wx:if="{{unSubmitcourses.length>0}}">
+      <text>当前还有{{unSubmitcourses.length}}场问卷可以答题，是否前往？</text>
+    </view>
   </view>
 </view>

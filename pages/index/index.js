@@ -25,7 +25,7 @@ Page({
     //   this.doLogin();
     // }
   },
-  getPhoneNumber(e){
+  getPhoneNumber(e) {
     console.log(e.detail.errMsg)
     console.log(e.detail.iv)
     console.log(e.detail.encryptedData)
@@ -79,9 +79,9 @@ Page({
           wx.setStorageSync('skey', sessionKey);
           wx.setStorageSync('jwt_token', token);
           //userApi.getByUnionId(openId).then(res1 => {
-          userApi.search({ 'open_id': openId}).then(users => {
+          userApi.search({ 'open_id': openId }).then(users => {
             console.log('res1', users)
-            if (users && users.length>0) {//have register
+            if (users && users.length > 0) {//have register
               wx.setStorageSync('user', JSON.stringify(users[0]));
               wx.redirectTo({ url: '/pages/nav/nav' })
             } else {

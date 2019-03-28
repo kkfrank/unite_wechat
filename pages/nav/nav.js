@@ -6,7 +6,7 @@ import {
 import {
   courses
 } from '../../mockdata/courses.js'
-import { compareDate } from '../../utils/util.js' 
+import { compareDate } from '../../utils/util.js'
 Page({
   // 检查用户未答题的问卷
   refreshSurvey: function () {
@@ -35,6 +35,8 @@ Page({
         }
         return true
       })
+      console.log('unSubmitcourses')
+      console.log(unSubmitcourses)
       this.setData({
         isLoading: false,
         unSubmitcourses: unSubmitcourses
@@ -61,51 +63,51 @@ Page({
    */
   data: {
     isLoading: false,
-    unSubmitcourses:[],
+    unSubmitcourses: [],
     timer: null,
     user: {
     },
     navList: [{
-        name: '日程',
-        url: '../agenda/list/list'
-      },
-      {
-        name: '讲师',
-        url: '../teacher/list/list'
-      },
-      {
-        name: '调查问卷',
-        isSurvey: true,
-        url: '../survey/list2/list2'
-      },
-      {
-        name: '个人中心',
-        url: '../user/user/user'
-      },
-      {
-        name: '关于活动',
-        url: '../unity/unity'
-      }
+      name: '日程',
+      url: '../agenda/list/list'
+    },
+    {
+      name: '讲师',
+      url: '../teacher/list/list'
+    },
+    {
+      name: '调查问卷',
+      isSurvey: true,
+      url: '../survey/list2/list2'
+    },
+    {
+      name: '个人中心',
+      url: '../user/user/user'
+    },
+    {
+      name: '关于活动',
+      url: '../unity/unity'
+    }
     ]
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-    
+  onLoad: function (options) {
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
     var user = JSON.parse(wx.getStorageSync('user'));
     this.setData({
       user: user
@@ -113,42 +115,42 @@ Page({
     clearInterval(this.data.timer)
     this.refreshSurvey()
     this.setData({
-      'timer': setInterval(this.refreshSurvey, 1000*60)
+      'timer': setInterval(this.refreshSurvey, 1000 * 60 * 60)
     })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
     clearInterval(this.data.timer)
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
     clearInterval(this.data.timer)
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

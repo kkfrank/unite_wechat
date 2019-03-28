@@ -1,7 +1,9 @@
 /**app.wxss**/
 @import "icon.wxss";
 @import "helper.wxss";
+
 /*@import "colorui.wxss";*/
+
 
 .container {
   height: 100%;
@@ -9,7 +11,7 @@
 
 .container {
   height: 100%;
-} 
+}
 
 .cu-modal.show {
   z-index: 99999;
@@ -143,4 +145,3 @@
     transform: translateY(0px);
   }
 }
- 

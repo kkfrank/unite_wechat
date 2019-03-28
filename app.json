@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/index2",
+    "pages/nav/nav",   
+    "pages/nav/3",
     "pages/user/user/user",
-    "pages/nav/nav",
     "pages/survey/list2/list2",
     "pages/survey/list/list",
     "pages/register/register",

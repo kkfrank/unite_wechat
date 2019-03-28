@@ -1,0 +1,67 @@
+/* pages/nav/nav.wxss */
+
+.tips {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #40a9ff;
+  padding: 0 20rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.tips text {
+  display: inline-block;
+  padding-bottom: 10rpx;
+}
+
+.nav {
+  margin-top: 100rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 80rpx;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav>.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  position: relative;
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 20rpx;
+  margin: 40rpx 0 0;
+  box-shadow: 10rpx 10rpx 10rpx 0 #e7e7e7;
+}
+.hot {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  top: 20rpx;
+  width: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #40a9ff;
+  height: 40rpx;
+}
+/* .nav>.nav-item:nth-child(-n + 4) {
+  
+} */
+
+/* .nav>.nav-item:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
