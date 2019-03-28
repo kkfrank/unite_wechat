@@ -38,7 +38,7 @@ Page({
       'questions': []
     }
     this.data.showSurvey.map((ele, index) => {
-      if (!ele.chooseAnswer) {
+      if (ele.chooseAnswer === null || typeof ele.chooseAnswer === 'undefined' || ele.chooseAnswer.length === 0) {
         noAnswerIndex = index + 1
       }
       submitForm.questions.push({
