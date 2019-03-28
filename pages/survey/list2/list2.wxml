@@ -3,6 +3,7 @@
 <view class="list" wx:elif="{{unSubmitcourses.length>0}}">
  <view class="item" wx:for="{{unSubmitcourses}}" bindtap="toDetail" wx:key="*this" data-item="{{item}}">
     <view>
+     <block wx:if="{{!item.specialSurvey}}">
       <view class='mb20'>
         <text>主题: </text>
         <text>{{item.title}}</text>
@@ -12,6 +13,8 @@
         <text>演讲人: </text>
         <text>{{helper.getItemByKey(teachers,'id',item.teacherId).name}}</text>
       </view>
+    </block>
+    <view wx:else>{{item.title}}</view>
     </view>
     <text class='detail-icon'>></text>
   </view>
