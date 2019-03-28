@@ -81,7 +81,7 @@ var courses = [
     surveyIds: ["Zero1", "Zero2", "Zero5", "Zero6", "Zero7", "Zero8"],
     startTime: "2019-03-29 11:30",
     endTime: "2019-03-29 17:20",
-    title: '问卷',
+    title: '活动整体评价',
     specialSurvey: true,
     isCourse: false
   }
