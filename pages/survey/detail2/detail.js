@@ -32,6 +32,7 @@ Page({
    * 用户点击提交调查问卷
    */
   submit() {
+    console.log(this.data.showSurvey)
     let noAnswerIndex = 0
     let submitForm = {
       'userId': this.data.user['id'],
@@ -55,6 +56,8 @@ Page({
       })
       return false
     }
+    console.log('---------submitForm')
+    console.log(submitForm)
     addSurvey(submitForm).then(res => {
       wx.showToast({
         title: '提交成功',
@@ -66,7 +69,6 @@ Page({
           })
         }
       })
-      
     })
   },
   /**
@@ -81,6 +83,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log('detail load -------')
     const showSurvey = survey.filter(item => {
       if (options.surveyIds.indexOf(item.id) !== -1) {
         return true
@@ -105,7 +108,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    const list = this.data.showSurvey
+    list.map((ele, index) => {
+      ele.chooseAnswer = null
+    })
+    this.setData({
+      showSurvey: list
+    })
   },
 
   /**
