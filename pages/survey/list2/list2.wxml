@@ -21,5 +21,5 @@
 </view>
 <wait wx:else/>
 <view class="tips" wx:if="{{submitCourseIds.length>0}}" bindtap="toUser">
-  你已经问卷{{submitCourseIds.length}}场,点击查看优惠码
+  你已经填写{{submitCourseIds.length}}场问卷,点击查看优惠码
 </view>
